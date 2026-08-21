@@ -58,42 +58,6 @@ const PRODUCTS = [
         composition: '100% coton biologique.'
     },
     {
-        id: 'emeraude-longue',
-        name: 'Robe Émeraude',
-        price: 74.9,
-        oldPrice: null,
-        gradient: 'grad-emeraude',
-        colorFamily: 'vert',
-        colors: [
-            { name: 'Émeraude', hex: '#0a8f5f' },
-            { name: 'Turquoise', hex: '#23c1b2' }
-        ],
-        sizes: ['S', 'M', 'L', 'XL'],
-        style: 'fluide',
-        isNew: false,
-        isBestseller: true,
-        description: "Robe longue drapée, col en V et taille ajustable. Une pièce intemporelle pour illuminer chaque tenue d'été.",
-        composition: '100% viscose, finitions dentelle.'
-    },
-    {
-        id: 'lagon-turquoise',
-        name: 'Robe Lagon',
-        price: 54.9,
-        oldPrice: 69.9,
-        gradient: 'grad-turquoise',
-        colorFamily: 'bleu',
-        colors: [
-            { name: 'Turquoise', hex: '#23c1b2' },
-            { name: 'Blanc', hex: '#ffffff' }
-        ],
-        sizes: ['XS', 'S', 'M'],
-        style: 'courte',
-        isNew: true,
-        isBestseller: false,
-        description: 'Robe courte évasée, idéale pour les journées ensoleillées en ville comme en bord de mer.',
-        composition: '100% lin.'
-    },
-    {
         id: 'corail-maxi',
         name: 'Robe Corail Maxi',
         price: 79.9,
