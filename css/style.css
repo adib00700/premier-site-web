@@ -260,8 +260,11 @@ section { padding: 70px 0; }
 /* ===== Product grid & cards ===== */
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 28px;
+}
+.product-card .swatch-photo {
+    max-height: 420px;
 }
 .product-card {
     background: #fff;
