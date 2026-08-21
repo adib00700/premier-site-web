@@ -41,9 +41,7 @@
             <p>Découvrez notre collection de robes d'été, pensée pour illuminer chaque instant.</p>
             <a href="collection.html" class="btn btn-primary">Découvrir la collection</a>
         </div>
-        <div class="hero-photo swatch-photo grad-hero">
-            <span class="swatch-label">Photo à intégrer</span>
-        </div>
+        <img src="images/hero-beige.png" alt="Robe d'été élégante" class="hero-photo swatch-photo">
     </div>
 </section>
 
@@ -177,9 +175,7 @@ function renderMiniGrid(containerId, list) {
     const el = document.getElementById(containerId);
     el.innerHTML = list.slice(0, 4).map(p => `
         <a class="product-card" href="produit.html?id=${p.id}" style="display:block;">
-            <div class="swatch-photo ${p.gradient}">
-                <span class="swatch-label">Photo à intégrer</span>
-            </div>
+            ${productPhotoHTML(p)}
             <div class="card-body">
                 ${p.isNew ? '<span class="tag">Nouveauté</span>' : ''}
                 <h3>${p.name}</h3>

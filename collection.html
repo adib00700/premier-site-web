@@ -145,9 +145,7 @@ function render() {
 
     grid.innerHTML = list.map(p => `
         <a class="product-card" href="produit.html?id=${p.id}" style="display:block;">
-            <div class="swatch-photo ${p.gradient}">
-                <span class="swatch-label">Photo à intégrer</span>
-            </div>
+            ${productPhotoHTML(p)}
             <div class="card-body">
                 ${p.isNew ? '<span class="tag">Nouveauté</span>' : ''}
                 <h3>${p.name}</h3>

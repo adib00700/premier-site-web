@@ -60,16 +60,19 @@ function renderProduct() {
         <div class="product-detail">
             <div class="gallery">
                 <div class="gallery-main" id="galleryMain">
-                    <div class="swatch-photo ${product.gradient}" style="width:100%;height:100%;">
-                        <span class="swatch-label">Photo à intégrer — clique pour zoomer</span>
-                    </div>
+                    ${productPhotoHTML(product)}
                 </div>
                 <div class="thumb-row">
-                    <div class="thumb active swatch-photo ${product.gradient}"></div>
-                    <div class="thumb swatch-photo ${product.gradient}" style="filter:brightness(1.15);"></div>
-                    <div class="thumb swatch-photo ${product.gradient}" style="filter:brightness(0.85);"></div>
+                    ${product.image
+                        ? `<img src="${product.image}" alt="${product.name}" class="thumb active swatch-photo">
+                           <img src="${product.image}" alt="${product.name}" class="thumb swatch-photo" style="filter:brightness(1.1);">
+                           <img src="${product.image}" alt="${product.name}" class="thumb swatch-photo" style="filter:brightness(0.9);">`
+                        : `<div class="thumb active swatch-photo ${product.gradient}"></div>
+                           <div class="thumb swatch-photo ${product.gradient}" style="filter:brightness(1.15);"></div>
+                           <div class="thumb swatch-photo ${product.gradient}" style="filter:brightness(0.85);"></div>`
+                    }
                 </div>
-                <p style="font-size:12px;color:var(--ink-soft);margin-top:10px;">Dépose tes photos dans /images et remplace les div .swatch-photo par des balises &lt;img&gt; pour les afficher ici.</p>
+                ${!product.image ? `<p style="font-size:12px;color:var(--ink-soft);margin-top:10px;">Photo pas encore ajoutée pour cette robe — dépose-la dans /images et ajoute le champ "image" dans js/products.js.</p>` : ''}
             </div>
 
             <div class="pd-info">

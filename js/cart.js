@@ -64,7 +64,7 @@ function renderCartPage() {
         total += lineTotal;
         return `
             <div class="cart-item">
-                <div class="swatch-photo ${product.gradient}"></div>
+                ${productPhotoHTML(product)}
                 <div>
                     <h3 style="font-size:16px;margin-bottom:4px;">${product.name}</h3>
                     <div style="font-size:13px;color:var(--ink-soft);">Couleur : ${item.color} · Taille : ${item.size} · Qté : ${item.qty}</div>

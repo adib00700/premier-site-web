@@ -23,6 +23,7 @@ const PRODUCTS = [
         name: 'Robe Soleil',
         price: 59.9,
         oldPrice: null,
+        image: 'images/soleil-jaune.png',
         gradient: 'grad-jaune',
         colorFamily: 'jaune',
         colors: [
@@ -41,6 +42,7 @@ const PRODUCTS = [
         name: 'Robe Riviera',
         price: 64.9,
         oldPrice: 79.9,
+        image: 'images/riviera-bleu.png',
         gradient: 'grad-bleu',
         colorFamily: 'bleu',
         colors: [
@@ -151,4 +153,13 @@ function findProduct(id) {
 
 function formatPrice(value) {
     return value.toFixed(2).replace('.', ',') + ' €';
+}
+
+/* Retourne une balise <img> si le produit a une vraie photo, sinon un dégradé placeholder. */
+function productPhotoHTML(p, extraClass) {
+    extraClass = extraClass || '';
+    if (p.image) {
+        return `<img src="${p.image}" alt="${p.name}" class="swatch-photo ${extraClass}">`;
+    }
+    return `<div class="swatch-photo ${p.gradient} ${extraClass}"><span class="swatch-label">Photo à intégrer</span></div>`;
 }
