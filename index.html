@@ -1,97 +1,202 @@
-<html>
-    <link rel="stylesheet" href="style.css">
-    <body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solaire — Robes d'été élégantes et colorées</title>
+<meta name="description" content="Collection de robes d'été élégantes, féminines et colorées. Livraison rapide, coupes fluides, couleurs solaires.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-        <h1 id="tr1">this is my first web site</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum veniam quis hic, ex culpa consequatur quos, tenetur, suscipit sed perspiciatis consectetur aliquid deserunt. Molestias architecto eveniet tempore in voluptates!</p>
-        <h1 id="tr2">Welcome to my page</h1>
-        <p>Learning HTML step by step</p>
+<div class="announce-bar">LIVRAISON OFFERTE DÈS 60€ · OFFRE ÉTÉ -20% AVEC LE CODE SOLEIL20</div>
 
-        <h3>listes de choix </h3>
-        <ol>
-            <li> Real Madrid </li>
-            <li> barca </li>
-            <li> valence </li>
+<header class="site-header">
+    <div class="container">
+        <a href="index.html" class="brand">Sol<span>aire</span></a>
+        <nav class="main-nav">
+            <a href="index.html" class="active">Accueil</a>
+            <a href="collection.html">Collection</a>
+            <a href="collection.html?filtre=nouveautes">Nouveautés</a>
+            <a href="collection.html?filtre=couleurs">Robes colorées</a>
+            <a href="collection.html?filtre=bestsellers">Best-sellers</a>
+            <a href="about.html">À propos</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="header-actions">
+            <button class="menu-toggle" aria-label="Menu">☰</button>
+            <a href="panier.html" class="icon-btn" aria-label="Panier">🛍️<span class="cart-count">0</span></a>
+        </div>
+    </div>
+</header>
 
-        </ol>
-        <h2 id="tr3">tableau</h2>
-        <table border="1">
-            <tr></tr>
-                  <td>hamza</td>
-                  <td>othmane</td>
-                  <td>serengete</td>
-            <tr></tr>
-                  <td>anas</td>
-                  <td>wassa3</td>
-                  <td>khadam 3la 7.5</td>
-            <tr></tr>
-                  <td>abdessami3</td>
-                  <td>hawih hamza</td>
-                  <td>mosssawir</td>
-            <tr></tr>
-        </table>
-        <p>exemple de tableau HTML</p>
-        <h1>ha lhwa bda </h1>
-        <form>
-             <label>username : </label>
-              <input type="text">
-             <label>password :  </label>
-              <input type="password"> <br> <br> <br>
-             
-             
-             <label>payment method :  </label>
+<section class="hero">
+    <div class="container hero" style="padding:0;">
+        <div class="hero-copy">
+            <span class="eyebrow">Collection Été</span>
+            <h1>L'élégance en couleurs</h1>
+            <p>Découvrez notre collection de robes d'été, pensée pour illuminer chaque instant.</p>
+            <a href="collection.html" class="btn btn-primary">Découvrir la collection</a>
+        </div>
+        <div class="hero-photo swatch-photo grad-hero">
+            <span class="swatch-label">Photo à intégrer</span>
+        </div>
+    </div>
+</section>
 
-              <input type="radio" name="payment method ">credit card
-              <input type="radio" name="payment method ">usdt trc20 <br> 
+<section id="nouveautes">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Nouveautés</h2>
+                <p>Les dernières arrivées de la saison, fraîches et colorées.</p>
+            </div>
+            <a href="collection.html?filtre=nouveautes" class="section-link">Voir tout →</a>
+        </div>
+        <div class="product-grid" id="newArrivalsGrid"></div>
+    </div>
+</section>
 
-             <h3>my fault </h3>
+<section id="couleurs" style="background:var(--cream-2);">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Couleurs de l'été</h2>
+                <p>Une palette solaire pensée pour sublimer chaque teint.</p>
+            </div>
+        </div>
+        <div class="color-band">
+            <a href="collection.html?couleur=rose" class="color-chip grad-fuchsia">Fuchsia</a>
+            <a href="collection.html?couleur=orange" class="color-chip grad-corail">Corail</a>
+            <a href="collection.html?couleur=jaune" class="color-chip grad-jaune">Soleil</a>
+            <a href="collection.html?couleur=bleu" class="color-chip grad-turquoise">Turquoise</a>
+            <a href="collection.html?couleur=vert" class="color-chip grad-emeraude">Émeraude</a>
+            <a href="collection.html?couleur=bleu" class="color-chip grad-bleu">Bleu royal</a>
+        </div>
+    </div>
+</section>
 
-              <input type="checkbox" >wach baghi thawa  <br>
-              <input type="checkbox" >oula baghi dir l3a9a <br>
-              <input type="checkbox" >oula baghi tamchi lberra <br> 
-              <input type="checkbox" >oula trja3 l sale  <br>
-              <br>
-              <br>
-              
-              <label>choix pd : </label> 
-              <select>
-                <option>hamza</option>
-                <option>othmane </option>
-                <option>anwar</option>
-              </select> <br> <br>
+<section id="preferees">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Nos robes préférées</h2>
+                <p>Les pièces coup de cœur de l'équipe Solaire.</p>
+            </div>
+            <a href="collection.html?filtre=bestsellers" class="section-link">Voir tout →</a>
+        </div>
+        <div class="product-grid" id="bestsellersGrid"></div>
+    </div>
+</section>
 
-              <label>votre message :  </label> <br> <br>
+<section class="testimonials">
+    <div class="container">
+        <div class="section-head">
+            <div>
+                <h2>Elles adorent Solaire</h2>
+            </div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">« Un tombé parfait et des couleurs qui claquent en photo. Je recommande les yeux fermés. »</p>
+                <div class="author">— Camille B.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">« La qualité est vraiment au rendez-vous, on sent le soin apporté aux finitions. »</p>
+                <div class="author">— Sarah L.</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="quote">« Livraison rapide et robe encore plus belle qu'en photo. Mon nouveau coup de cœur été. »</p>
+                <div class="author">— Nora K.</div>
+            </div>
+        </div>
+    </div>
+</section>
 
+<section>
+    <div class="container">
+        <div class="newsletter">
+            <h2>-15% sur votre première commande</h2>
+            <p>Inscrivez-vous à notre newsletter et recevez votre code de bienvenue.</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre adresse email" required>
+                <button type="submit" class="btn btn-dark">S'inscrire</button>
+            </form>
+            <p class="newsletter-note">En vous inscrivant, vous acceptez de recevoir nos actualités. Désinscription à tout moment.</p>
+        </div>
+    </div>
+</section>
 
-              <textarea cols="50"  rows="10"></textarea> <br> <br>
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div>
+                <div class="brand" style="font-size:20px;margin-bottom:12px;">Sol<span>aire</span></div>
+                <p style="color:var(--ink-soft);font-size:14px;max-width:320px;">Robes d'été élégantes, féminines et colorées, pensées pour illuminer chaque instant.</p>
+            </div>
+            <div>
+                <h4>Boutique</h4>
+                <ul>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="collection.html?filtre=nouveautes">Nouveautés</a></li>
+                    <li><a href="collection.html?filtre=bestsellers">Best-sellers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Aide</h4>
+                <ul>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">À propos</a></li>
+                    <li><a href="panier.html">Mon panier</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Suivez-nous</h4>
+                <ul>
+                    <li>Instagram</li>
+                    <li>Pinterest</li>
+                    <li>TikTok</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Solaire. Tous droits réservés.</div>
+    </div>
+</footer>
 
-              <button> s'enregistrer </button> <br> <br>
-              <h2>image</h2> <br> 
-              <img src="" alt="">
-              
-              
-              <br> <br> <br><br>
+<script src="js/products.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script>
+function renderMiniGrid(containerId, list) {
+    const el = document.getElementById(containerId);
+    el.innerHTML = list.slice(0, 4).map(p => `
+        <a class="product-card" href="produit.html?id=${p.id}" style="display:block;">
+            <div class="swatch-photo ${p.gradient}">
+                <span class="swatch-label">Photo à intégrer</span>
+            </div>
+            <div class="card-body">
+                ${p.isNew ? '<span class="tag">Nouveauté</span>' : ''}
+                <h3>${p.name}</h3>
+                <div class="color-dots">
+                    ${p.colors.map(c => `<span class="color-dot" style="background:${c.hex}"></span>`).join('')}
+                </div>
+                <div class="price-row">
+                    <span class="price">${formatPrice(p.price)}</span>
+                    ${p.oldPrice ? `<span class="old-price">${formatPrice(p.oldPrice)}</span>` : ''}
+                </div>
+            </div>
+        </a>
+    `).join('');
+}
+renderMiniGrid('newArrivalsGrid', PRODUCTS.filter(p => p.isNew));
+renderMiniGrid('bestsellersGrid', PRODUCTS.filter(p => p.isBestseller));
+</script>
 
-
-            
-
-              <a href="https://www.24gaming.ma">visit our website </a> <br> <br>
-              
-              <a href="contact.html">contact us</a> <br> <br>
-
-              <a href="robe.html">voir la boutique (Robe Fluide d'Été)</a> <br> <br>
-
-                 <h2>video</h2>
-
-        <video  width="270" height="200" controls> 
-            <source src="video test.mp4" type="video/mp4">
-            
-        </video>
-
-
-
-
-
-
-    </body>
+</body>
 </html>

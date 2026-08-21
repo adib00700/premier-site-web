@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact — Solaire</title>
+<title>Panier — Solaire</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,33 +23,28 @@
             <a href="collection.html?filtre=couleurs">Robes colorées</a>
             <a href="collection.html?filtre=bestsellers">Best-sellers</a>
             <a href="about.html">À propos</a>
-            <a href="contact.html" class="active">Contact</a>
+            <a href="contact.html">Contact</a>
         </nav>
         <div class="header-actions">
             <button class="menu-toggle" aria-label="Menu">☰</button>
-            <a href="panier.html" class="icon-btn" aria-label="Panier">🛍️<span class="cart-count">0</span></a>
+            <a href="panier.html" class="icon-btn active" aria-label="Panier">🛍️<span class="cart-count">0</span></a>
         </div>
     </div>
 </header>
 
 <div class="page-banner container">
-    <h1>Contactez-nous</h1>
-    <p>Une question sur une commande, une taille, un délai ? Écrivez-nous.</p>
+    <h1>Mon panier</h1>
 </div>
 
-<div class="container contact-grid">
-    <form class="contact-form">
-        <input type="text" placeholder="Votre nom" required>
-        <input type="email" placeholder="Votre email" required>
-        <textarea rows="6" placeholder="Votre message" required></textarea>
-        <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
-    </form>
-    <div class="contact-info-card">
-        <h3 style="margin-bottom:18px;">Nos coordonnées</h3>
-        <p>📧 contact@solaire-boutique.com</p>
-        <p>📞 +33 1 23 45 67 89</p>
-        <p>🕒 Du lundi au vendredi, 9h–18h</p>
-        <p style="margin-top:24px;color:var(--ink-soft);font-size:14px;">Réponse sous 24 à 48h ouvrées. Pour toute question urgente concernant une commande, merci d'indiquer votre numéro de commande.</p>
+<div class="container">
+    <div class="cart-layout">
+        <div id="cartItems"></div>
+        <div class="cart-summary" id="cartSummary">
+            <div class="summary-row"><span>Sous-total</span><span id="cartTotal">0,00 €</span></div>
+            <div class="summary-row"><span>Livraison</span><span>Offerte dès 60€</span></div>
+            <div class="summary-row summary-total"><span>Total</span><span id="cartTotalBottom">0,00 €</span></div>
+            <button class="btn btn-primary btn-block" style="margin-top:18px;" onclick="alert('Démo : le paiement réel sera branché ici (Shopify Buy Button ou Stripe).')">Passer commande</button>
+        </div>
     </div>
 </div>
 
@@ -62,6 +57,19 @@
 <script src="js/products.js"></script>
 <script src="js/cart.js"></script>
 <script src="js/main.js"></script>
+<script>
+    const observer = new MutationObserver(() => {
+        const t = document.getElementById('cartTotal');
+        const b = document.getElementById('cartTotalBottom');
+        if (t && b) b.textContent = t.textContent;
+    });
+    observer.observe(document.getElementById('cartItems'), { childList: true, subtree: true });
+    document.addEventListener('DOMContentLoaded', () => {
+        const t = document.getElementById('cartTotal');
+        const b = document.getElementById('cartTotalBottom');
+        if (t && b) b.textContent = t.textContent;
+    });
+</script>
 
 </body>
 </html>
