@@ -1,0 +1,22 @@
+body  #tr1 {
+text-align: center;
+    color : red;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+#tr2 {
+    text-align: center;
+     color :rgb(255, 128, 0)
+
+
+}
+body{  
+
+    background-image: url(backgroundcolor.jpg)
+    
+    
+    
+    
+    
+} 
