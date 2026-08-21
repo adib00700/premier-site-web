@@ -5,17 +5,18 @@ const PRODUCTS = [
         name: 'Robe Nuance',
         price: 69.9,
         oldPrice: 89.9,
+        image: 'images/nuance-fuchsia.png',
         gradient: 'grad-fuchsia',
         colorFamily: 'rose',
         colors: [
-            { name: 'Fuchsia', hex: '#e8408a' },
+            { name: 'Rose bohème', hex: '#e8408a' },
             { name: 'Corail', hex: '#ff6f4f' }
         ],
         sizes: ['XS', 'S', 'M', 'L', 'XL'],
         style: 'fluide',
         isNew: true,
         isBestseller: true,
-        description: "Une robe longue fluide à fines bretelles, pensée pour les soirées d'été méditerranéennes. Tombé aérien et léger.",
+        description: "Robe longue à manches bouffantes et large ceinture, imprimé bohème rose et doré. Une pièce raffinée pour illuminer vos soirées d'été.",
         composition: '100% viscose écoresponsable, doublure intérieure.'
     },
     {
@@ -97,6 +98,7 @@ const PRODUCTS = [
         name: 'Robe Corail Maxi',
         price: 79.9,
         oldPrice: null,
+        image: 'images/corail-maxi.png',
         gradient: 'grad-corail',
         colorFamily: 'orange',
         colors: [
@@ -107,7 +109,7 @@ const PRODUCTS = [
         style: 'fluide',
         isNew: false,
         isBestseller: true,
-        description: 'Robe longue à volants, coupe ample et confortable. Un imprimé solaire qui capte tous les regards.',
+        description: 'Robe longue à fines bretelles et bordure florale, coupe ample et fluide. Un imprimé solaire qui capte tous les regards.',
         composition: '100% viscose.'
     },
     {
@@ -115,16 +117,17 @@ const PRODUCTS = [
         name: 'Robe Fuchsia Courte',
         price: 49.9,
         oldPrice: 59.9,
+        image: 'images/fuchsia-courte.png',
         gradient: 'grad-fuchsia',
         colorFamily: 'rose',
         colors: [
-            { name: 'Fuchsia', hex: '#e8408a' }
+            { name: 'Blanc fleuri', hex: '#f6a6c9' }
         ],
         sizes: ['XS', 'S', 'M', 'L'],
         style: 'courte',
         isNew: true,
         isBestseller: false,
-        description: 'Robe courte cintrée, parfaite pour les cocktails en terrasse. Coupe près du corps et dos nu.',
+        description: 'Robe courte évasée à imprimé fleuri, sans manches. Légère et confortable pour les journées ensoleillées.',
         composition: '95% coton, 5% élasthanne.'
     },
     {
@@ -132,6 +135,7 @@ const PRODUCTS = [
         name: 'Robe Bleu Imprimé',
         price: 62.9,
         oldPrice: null,
+        image: 'images/bleu-imprime.png',
         gradient: 'grad-bleu',
         colorFamily: 'bleu',
         colors: [
@@ -142,8 +146,62 @@ const PRODUCTS = [
         style: 'imprime',
         isNew: false,
         isBestseller: false,
-        description: 'Robe mi-longue à imprimé graphique, bretelles ajustables et jupe évasée.',
+        description: 'Robe portefeuille mi-longue à petit imprimé fleuri, manches courtes volantées et fente jambe.',
         composition: '100% viscose.'
+    },
+    {
+        id: 'denim-chemise',
+        name: 'Robe Chemise Denim',
+        price: 69.9,
+        oldPrice: null,
+        image: 'images/denim-chemise.png',
+        gradient: 'grad-bleu',
+        colorFamily: 'bleu',
+        colors: [
+            { name: 'Denim', hex: '#5c7fa3' }
+        ],
+        sizes: ['S', 'M', 'L', 'XL'],
+        style: 'chemise',
+        isNew: true,
+        isBestseller: false,
+        description: 'Robe chemise en denim léger, ceinturée à la taille, manches à revers. Un basique intemporel à porter du matin au soir.',
+        composition: '100% coton chambray.'
+    },
+    {
+        id: 'noire-cocktail',
+        name: 'Robe Noire Cocktail',
+        price: 79.9,
+        oldPrice: 99.9,
+        image: 'images/noire-cocktail.png',
+        gradient: 'grad-noir',
+        colorFamily: 'noir',
+        colors: [
+            { name: 'Noir', hex: '#1a1a1a' }
+        ],
+        sizes: ['XS', 'S', 'M', 'L'],
+        style: 'habillee',
+        isNew: false,
+        isBestseller: true,
+        description: 'Robe de cocktail au décolleté cœur et jupe évasée. Une pièce élégante pour les soirées d\'été qui se prolongent tard.',
+        composition: '95% polyester, 5% élasthanne, doublure satinée.'
+    },
+    {
+        id: 'nuisette-blanche',
+        name: 'Nuisette Blanche',
+        price: 29.9,
+        oldPrice: null,
+        image: 'images/nuisette-blanche.png',
+        gradient: 'grad-blanc',
+        colorFamily: 'blanc',
+        colors: [
+            { name: 'Blanc', hex: '#ffffff' }
+        ],
+        sizes: ['XS', 'S', 'M', 'L'],
+        style: 'fluide',
+        isNew: true,
+        isBestseller: false,
+        description: 'Nuisette fine à bretelles fines, coupe droite et fluide. Parfaite seule ou en surperposition légère les soirs d\'été.',
+        composition: '95% modal, 5% élasthanne.'
     }
 ];
 
