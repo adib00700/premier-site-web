@@ -425,11 +425,13 @@ footer.site-footer {
 /* ===== Product detail page ===== */
 .product-detail {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(280px, 420px) 1fr;
     gap: 56px;
     padding: 40px 0 80px;
 }
 .gallery-main {
+    max-width: 420px;
+    margin: 0 auto;
     aspect-ratio: 3/4;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -441,7 +443,7 @@ footer.site-footer {
 }
 .gallery-main.zoomed { cursor: zoom-out; }
 .gallery-main.zoomed .swatch-photo { background-size: 180%; }
-.thumb-row { display: flex; gap: 12px; margin-top: 16px; }
+.thumb-row { display: flex; gap: 12px; margin-top: 16px; max-width: 420px; justify-content: center; margin-left: auto; margin-right: auto; }
 .thumb-row .thumb {
     width: 76px; height: 96px;
     border-radius: 10px;
