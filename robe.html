@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Robe Fluide d'Été - Boutique Élégance</title>
+    <link rel="stylesheet" href="robe.css">
+</head>
+<body>
+
+    <div class="announce-bar">PROFITEZ DE L'OFFRE ÉTÉ 🌞</div>
+
+    <header class="shop-header">
+        <span class="menu-icon">☰</span>
+        <span class="logo">Boutique Élégance</span>
+        <span class="cart-icon">🛍️</span>
+    </header>
+
+    <main class="product-page">
+
+        <div class="gallery">
+            <div class="gallery-main">
+                <img id="mainImage" src="robe-1.jpg" alt="Robe Fluide d'Été - vue principale">
+            </div>
+            <div class="thumbs">
+                <img src="robe-1.jpg" alt="vue 1" class="active" onclick="document.getElementById('mainImage').src=this.src">
+                <img src="robe-2.jpg" alt="vue 2" onclick="document.getElementById('mainImage').src=this.src">
+                <img src="robe-3.jpg" alt="vue 3" onclick="document.getElementById('mainImage').src=this.src">
+            </div>
+            <p class="buy-note">Dépose tes photos dans ce dossier sous les noms robe-1.jpg, robe-2.jpg, robe-3.jpg pour qu'elles s'affichent ici automatiquement.</p>
+        </div>
+
+        <div class="product-info">
+            <h1>Robe Fluide d'Été</h1>
+            <div class="rating">★★★★★ (128 avis)</div>
+            <div class="price">39,90 € <span class="old-price">59,90 €</span></div>
+
+            <p class="description">
+                Une robe légère et fluide, parfaite pour l'été. Coupe ample et confortable,
+                idéale pour la plage, une balade en ville ou une soirée décontractée.
+                Tissu doux, respirant, disponible en plusieurs tailles.
+            </p>
+
+            <div class="buy-box">
+                <div class="qty-row">
+                    <button type="button" onclick="document.getElementById('qty').stepDown()">−</button>
+                    <input type="number" id="qty" value="1" min="1">
+                    <button type="button" onclick="document.getElementById('qty').stepUp()">+</button>
+                </div>
+
+                <div class="buy-button-container">
+                    <!--
+                        Colle ici le code du Shopify Buy Button (Sales channels > Buy Button)
+                        pour activer le vrai paiement. En attendant, un bouton temporaire
+                        s'affiche ci-dessous.
+                    -->
+                    <button class="add-to-cart-placeholder" disabled>Ajouter au panier (à activer)</button>
+                </div>
+                <p class="buy-note">Le paiement réel sera activé dès que le code Shopify Buy Button sera intégré ici.</p>
+            </div>
+        </div>
+
+    </main>
+
+</body>
+</html>
