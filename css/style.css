@@ -266,6 +266,33 @@ section { padding: 70px 0; }
 .product-card .swatch-photo {
     max-height: 420px;
 }
+
+/* ===== Carrousel défilant (accueil) ===== */
+.marquee-viewport {
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 40px, #000 calc(100% - 40px), transparent);
+}
+.marquee-row {
+    display: flex;
+    gap: 28px;
+    width: max-content;
+    padding: 0 32px;
+    animation: marquee-scroll 32s linear infinite;
+}
+.marquee-row:hover {
+    animation-play-state: paused;
+}
+.marquee-row .product-card {
+    flex: 0 0 240px;
+}
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .marquee-row { animation: none; }
+}
 .product-card {
     background: #fff;
     border-radius: var(--radius);

@@ -54,7 +54,9 @@
             </div>
             <a href="collection.html?filtre=nouveautes" class="section-link">Voir tout →</a>
         </div>
-        <div class="product-grid" id="newArrivalsGrid"></div>
+    </div>
+    <div class="marquee-viewport">
+        <div class="marquee-row" id="newArrivalsGrid"></div>
     </div>
 </section>
 
@@ -86,7 +88,9 @@
             </div>
             <a href="collection.html?filtre=bestsellers" class="section-link">Voir tout →</a>
         </div>
-        <div class="product-grid" id="bestsellersGrid"></div>
+    </div>
+    <div class="marquee-viewport">
+        <div class="marquee-row" id="bestsellersGrid"></div>
     </div>
 </section>
 
@@ -173,15 +177,12 @@
 <script>
 function renderMiniGrid(containerId, list) {
     const el = document.getElementById(containerId);
-    el.innerHTML = list.slice(0, 4).map(p => `
-        <a class="product-card" href="produit.html?id=${p.id}" style="display:block;">
+    const cardHTML = list.map(p => `
+        <a class="product-card" href="produit.html?id=${p.id}">
             ${productPhotoHTML(p)}
             <div class="card-body">
                 ${p.isNew ? '<span class="tag">Nouveauté</span>' : ''}
                 <h3>${p.name}</h3>
-                <div class="color-dots">
-                    ${p.colors.map(c => `<span class="color-dot" style="background:${c.hex}"></span>`).join('')}
-                </div>
                 <div class="price-row">
                     <span class="price">${formatPrice(p.price)}</span>
                     ${p.oldPrice ? `<span class="old-price">${formatPrice(p.oldPrice)}</span>` : ''}
@@ -189,6 +190,8 @@ function renderMiniGrid(containerId, list) {
             </div>
         </a>
     `).join('');
+    /* Liste dupliquée pour boucler le défilement sans coupure visible. */
+    el.innerHTML = cardHTML + cardHTML;
 }
 renderMiniGrid('newArrivalsGrid', PRODUCTS.filter(p => p.isNew));
 renderMiniGrid('bestsellersGrid', PRODUCTS.filter(p => p.isBestseller));
