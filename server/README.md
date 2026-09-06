@@ -10,19 +10,25 @@ séparément (Render, Railway, Vercel, ou ton propre serveur/VPS).
 
 ## 1. Ce qu'il reste à faire avant que ça fonctionne réellement
 
-### a. Brancher l'API Goldenott (obligatoire)
+### a. Terminer la config Goldenott (obligatoire)
 
-Le fichier `src/lib/goldenott.js` contient un **squelette** : je n'ai pas pu
-récupérer la doc officielle (`https://goldenott.net/api/documentation`,
-bloquée depuis mon environnement). Pour le finaliser :
+L'intégration Goldenott (`src/lib/goldenott.js`) est branchée sur la vraie
+API confirmée via leur doc Swagger (`https://goldenott.net/docs`) :
+authentification par header `X-API-Key`, création de ligne via
+`POST /v1/lines`, URL de connexion renvoyée dans `dns_link_for_samsung_lg`.
 
-1. Ouvre cette doc, ou dans ton panel revendeur Goldenott la section
-   "API" / "Developer".
-2. Note : l'URL de base, l'endpoint pour créer une ligne, la méthode
-   d'authentification (clé API ? user/pass revendeur ?), les champs
-   attendus en entrée, et les champs renvoyés (login, mot de passe, URL).
-3. Donne-moi ces infos (ou colle-moi un exemple `curl`/Postman) et
-   j'ajuste `buildRequestBody()` et `parseResponse()` dans ce fichier.
+Il reste seulement à renseigner **`GOLDENOTT_PACKAGE_MAP`** dans `.env` avec
+les vrais identifiants numériques de ton compte :
+
+1. Récupère ton token API depuis ton tableau de bord Goldenott →
+   `GOLDENOTT_API_KEY`.
+2. Appelle `GET /v1/packages` (ou regarde dans le dashboard) pour connaître
+   le `package_id` de chacune de tes offres.
+3. Récupère de la même façon `template_id`, `dns_domain_id` et
+   `tv_domain_id` (sections Templates / Domains du dashboard).
+4. Renseigne ces IDs dans `GOLDENOTT_PACKAGE_MAP` pour les 3 clés
+   `essentiel`, `premium`, `famille` (voir `.env.example` pour le format
+   JSON exact).
 
 ### b. Configurer WhatsApp Business Cloud API (Meta)
 
