@@ -1,0 +1,21 @@
+{
+  "name": "keloar-goldenott-whatsapp-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automation service: creates IPTV lines on Goldenott and sends the login/password/URL to the customer via WhatsApp Business (Cloud API).",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0"
+  }
+}

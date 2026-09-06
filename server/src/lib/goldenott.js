@@ -1,0 +1,90 @@
+// Goldenott reseller API client.
+//
+// NOTE: This module is intentionally isolated behind createGoldenottLine().
+// Goldenott's public API doc (https://goldenott.net/api/documentation) could
+// not be fetched automatically (network egress to that domain is blocked in
+// this environment). The request/response shape below is a placeholder
+// based on common IPTV reseller panel conventions and MUST be adjusted to
+// match the real Goldenott API before going live:
+//   1. Open https://goldenott.net/api/documentation (or Panel > API in your
+//      Goldenott reseller dashboard).
+//   2. Update GOLDENOTT_ENDPOINT_PATH, the request body shape in
+//      buildRequestBody(), and the field names read in parseResponse().
+//
+// Everything else in this project (WhatsApp sending, routes, order form)
+// works independently of this file's exact contents.
+
+const GOLDENOTT_ENDPOINT_PATH = '/reseller/create-line';
+
+function randomPassword(length = 10) {
+  const chars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz23456789';
+  let out = '';
+  for (let i = 0; i < length; i++) {
+    out += chars[Math.floor(Math.random() * chars.length)];
+  }
+  return out;
+}
+
+function buildRequestBody({ username, password, packageId, customerName }) {
+  // TODO: adjust field names to match the real Goldenott API contract.
+  return {
+    api_key: process.env.GOLDENOTT_API_KEY,
+    username,
+    password,
+    package_id: packageId || process.env.GOLDENOTT_DEFAULT_PACKAGE_ID,
+    note: customerName,
+  };
+}
+
+function parseResponse(data) {
+  // TODO: adjust to match the real Goldenott response fields.
+  const login = data.username || data.login;
+  const password = data.password;
+  const url = data.url || data.m3u_url || data.playback_url;
+
+  if (!login || !password || !url) {
+    throw new Error(
+      'Goldenott response is missing expected fields (login/password/url). ' +
+        'Update parseResponse() in server/src/lib/goldenott.js to match the real API response: ' +
+        JSON.stringify(data)
+    );
+  }
+
+  return { login, password, url };
+}
+
+/**
+ * Creates a new IPTV line on Goldenott and returns { login, password, url }.
+ *
+ * @param {Object} params
+ * @param {string} params.customerName
+ * @param {string} [params.usernameHint] preferred base for the generated username
+ * @param {string} [params.packageId] Goldenott package/bouquet id
+ */
+export async function createGoldenottLine({ customerName, usernameHint, packageId }) {
+  const baseUrl = process.env.GOLDENOTT_API_BASE_URL;
+  if (!baseUrl || !process.env.GOLDENOTT_API_KEY) {
+    throw new Error(
+      'Goldenott is not configured: set GOLDENOTT_API_BASE_URL and GOLDENOTT_API_KEY in .env'
+    );
+  }
+
+  const username =
+    (usernameHint || 'kel').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 10) +
+    Math.floor(1000 + Math.random() * 9000);
+  const password = randomPassword();
+
+  const response = await fetch(`${baseUrl}${GOLDENOTT_ENDPOINT_PATH}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(buildRequestBody({ username, password, packageId, customerName })),
+  });
+
+  if (!response.ok) {
+    const text = await response.text().catch(() => '');
+    throw new Error(`Goldenott API error ${response.status}: ${text}`);
+  }
+
+  const data = await response.json();
+  return parseResponse(data);
+}
