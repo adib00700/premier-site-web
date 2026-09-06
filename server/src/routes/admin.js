@@ -1,12 +1,15 @@
 import { Router } from 'express';
 import { requireAdminKey } from '../lib/auth.js';
-import { validateOrderInput, provisionTrialAndNotify } from '../lib/provision.js';
-import { sendCredentialsText } from '../lib/whatsapp.js';
+import { validateOrderInput, provisionTrial } from '../lib/provision.js';
+import { sendCredentialsTemplate, sendCredentialsText } from '../lib/whatsapp.js';
+import { saveTrial } from '../lib/trialStore.js';
 
 const router = Router();
 router.use(requireAdminKey);
 
-// Manual (re)generation of a free trial, e.g. when a customer asks by phone/DM.
+// Manual (re)generation of a free trial, e.g. when you want to start the
+// conversation yourself rather than wait for the customer to message first.
+// Uses the approved WhatsApp template since there's no active 24h window yet.
 router.post('/generate', async (req, res) => {
   const { name, phone } = req.body || {};
   const { errors } = validateOrderInput({ name, phone });
@@ -15,7 +18,9 @@ router.post('/generate', async (req, res) => {
   }
 
   try {
-    const credentials = await provisionTrialAndNotify({ name: name.trim(), phone: phone.trim() });
+    const credentials = await provisionTrial({ name: name.trim(), phone: phone.trim() });
+    saveTrial(phone.trim(), { name: name.trim(), ...credentials });
+    await sendCredentialsTemplate({ phone: phone.trim(), customerName: name.trim(), ...credentials });
     res.status(201).json({ ok: true, ...credentials });
   } catch (err) {
     console.error('[admin/generate] provisioning failed:', err.message);

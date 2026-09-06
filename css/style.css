@@ -816,53 +816,6 @@ h1, h2, h3, .brand {
     .plan.featured { order: -1; }
 }
 
-/* ===== Order form ===== */
-.order-form {
-    max-width: 480px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 36px;
-    box-shadow: var(--shadow-soft);
-}
-
-.order-field { display: flex; flex-direction: column; gap: 8px; }
-
-.order-field label {
-    font-size: 0.85rem;
-    color: var(--text-2);
-    font-weight: 500;
-}
-
-.order-field input,
-.order-field select {
-    background: var(--bg-1);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    padding: 12px 14px;
-    color: var(--text-0);
-    font-family: var(--font-body);
-    font-size: 0.95rem;
-}
-
-.order-field input:focus,
-.order-field select:focus {
-    outline: none;
-    border-color: var(--border-strong);
-}
-
-.order-status { min-height: 1.2em; font-size: 0.9rem; text-align: center; margin: 0; }
-.order-status-success { color: var(--success); }
-.order-status-error { color: #e07a6e; }
-
-@media (max-width: 720px) {
-    .order-form { padding: 26px; }
-}
-
 @media (max-width: 720px) {
     .nav-links.open {
         display: flex;
