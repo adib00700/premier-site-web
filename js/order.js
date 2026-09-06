@@ -6,15 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('order-form');
     if (!form) return;
 
-    const packageSelect = document.getElementById('order-package');
     const statusEl = document.getElementById('order-status');
-
-    // Pré-sélectionne la formule choisie depuis les boutons de tarifs.
-    document.querySelectorAll('[data-package]').forEach((el) => {
-        el.addEventListener('click', () => {
-            if (packageSelect) packageSelect.value = el.dataset.package;
-        });
-    });
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -25,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const payload = {
             name: form.name.value.trim(),
             phone: form.phone.value.trim(),
-            packageId: form.packageId.value,
         };
 
         submitBtn.disabled = true;
@@ -43,15 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error(data.error || 'Une erreur est survenue.');
             }
 
-            statusEl.textContent = 'Vos accès ont été envoyés sur WhatsApp ! Vérifiez vos messages.';
+            statusEl.textContent = 'Votre essai gratuit a été envoyé sur WhatsApp ! Vérifiez vos messages.';
             statusEl.classList.add('order-status-success');
             form.reset();
         } catch (err) {
-            statusEl.textContent = "Impossible d'envoyer vos accès pour le moment. Réessayez dans un instant ou contactez le support.";
+            statusEl.textContent = "Impossible d'envoyer votre essai pour le moment. Réessayez dans un instant ou contactez le support.";
             statusEl.classList.add('order-status-error');
         } finally {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Recevoir mes accès sur WhatsApp';
+            submitBtn.textContent = 'Recevoir mon essai gratuit sur WhatsApp';
         }
     });
 });

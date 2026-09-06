@@ -1,8 +1,10 @@
-# Automation Goldenott → WhatsApp (Keloar.com)
+# Automation Goldenott → WhatsApp (Keloar.com) — essai gratuit 24h
 
-Petit service qui, à la commande d'un client (ou déclenché manuellement),
-génère une ligne IPTV sur Goldenott (login / mot de passe / URL) et envoie
-ces accès directement sur WhatsApp via l'API Cloud officielle de Meta.
+Petit service qui, quand un visiteur demande un essai (ou déclenché
+manuellement), génère une ligne IPTV d'essai 24h sur Goldenott (login / mot
+de passe / URL) et envoie ces accès directement sur WhatsApp via l'API
+Cloud officielle de Meta. Les abonnements payants restent gérés
+manuellement par toi — ce service ne s'occupe que des essais gratuits.
 
 Le site (`index.html` à la racine) est hébergé en statique sur GitHub Pages
 et ne peut pas exécuter ce code : ce dossier `server/` doit être déployé
@@ -17,18 +19,19 @@ API confirmée via leur doc Swagger (`https://goldenott.net/docs`) :
 authentification par header `X-API-Key`, création de ligne via
 `POST /v1/lines`, URL de connexion renvoyée dans `dns_link_for_samsung_lg`.
 
-Il reste seulement à renseigner **`GOLDENOTT_PACKAGE_MAP`** dans `.env` avec
-les vrais identifiants numériques de ton compte :
+Il reste seulement à renseigner les IDs de ton **package d'essai 24h** dans
+`.env` :
 
 1. Récupère ton token API depuis ton tableau de bord Goldenott →
    `GOLDENOTT_API_KEY`.
-2. Appelle `GET /v1/packages` (ou regarde dans le dashboard) pour connaître
-   le `package_id` de chacune de tes offres.
+2. Appelle `GET /v1/packages` (ou regarde dans le dashboard) pour trouver le
+   `package_id` de ton offre d'essai 24h (crée-la dans Goldenott si elle
+   n'existe pas encore).
 3. Récupère de la même façon `template_id`, `dns_domain_id` et
    `tv_domain_id` (sections Templates / Domains du dashboard).
-4. Renseigne ces IDs dans `GOLDENOTT_PACKAGE_MAP` pour les 3 clés
-   `essentiel`, `premium`, `famille` (voir `.env.example` pour le format
-   JSON exact).
+4. Renseigne ces 4 IDs dans `GOLDENOTT_TRIAL_PACKAGE_ID`,
+   `GOLDENOTT_TRIAL_TEMPLATE_ID`, `GOLDENOTT_TRIAL_DNS_DOMAIN_ID` et
+   `GOLDENOTT_TRIAL_TV_DOMAIN_ID` (voir `.env.example`).
 
 ### b. Configurer WhatsApp Business Cloud API (Meta)
 
@@ -40,7 +43,7 @@ les vrais identifiants numériques de ton compte :
    (catégorie "Utility") avec 4 variables dans le corps, par exemple :
 
    ```
-   Bonjour {{1}}, voici vos accès Keloar.com :
+   Bonjour {{1}}, voici votre essai gratuit 24h Keloar.com :
    Identifiant : {{2}}
    Mot de passe : {{3}}
    URL de connexion : {{4}}
@@ -73,9 +76,9 @@ npm run dev
 
 ## 4. Endpoints
 
-- `POST /api/orders` — public, appelé par le formulaire de commande du
-  site. Body: `{ "name": "...", "phone": "+33612345678", "packageId": "premium" }`.
-  Rate-limité (20 requêtes / 15 min / IP).
+- `POST /api/orders` — public, appelé par le formulaire du site. Body:
+  `{ "name": "...", "phone": "+33612345678" }`. Rate-limité (20 requêtes /
+  15 min / IP).
 - `POST /api/admin/generate` — déclenchement manuel (même body), protégé
   par le header `x-admin-key: <ADMIN_API_KEY>`.
 - `POST /api/admin/resend` — renvoie des accès déjà connus en message texte

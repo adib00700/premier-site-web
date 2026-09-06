@@ -10,10 +10,11 @@
 //                        exp_date, dns_link_for_samsung_lg, ... }] }
 //     "dns_link_for_samsung_lg" is the URL delivered to the customer.
 //
-// package_id / template_id / dns_domain_id / tv_domain_id are account-specific
-// numeric IDs from your Goldenott dashboard (Packages / Templates / Domains).
-// They differ per plan, so they're configured per site package below via
-// GOLDENOTT_PACKAGE_MAP rather than hardcoded.
+// This service only creates free 24h trial lines (paid subscriptions are
+// still handled manually). package_id / template_id / dns_domain_id /
+// tv_domain_id are account-specific numeric IDs for your trial package —
+// find them in your Goldenott dashboard (Packages / Templates / Domains)
+// and set them via the GOLDENOTT_TRIAL_* env vars below.
 
 const ENDPOINT_PATH = '/v1/lines';
 
@@ -26,43 +27,38 @@ function randomPassword(length = 10) {
   return out;
 }
 
-function getPackageMap() {
-  const raw = process.env.GOLDENOTT_PACKAGE_MAP;
-  if (!raw) {
-    throw new Error(
-      'GOLDENOTT_PACKAGE_MAP is not configured in .env — see .env.example for the expected format.'
-    );
+function getTrialConfig() {
+  const required = [
+    'GOLDENOTT_TRIAL_PACKAGE_ID',
+    'GOLDENOTT_TRIAL_TEMPLATE_ID',
+    'GOLDENOTT_TRIAL_DNS_DOMAIN_ID',
+    'GOLDENOTT_TRIAL_TV_DOMAIN_ID',
+  ];
+  const missing = required.filter((key) => !process.env[key]);
+  if (missing.length) {
+    throw new Error(`Missing Goldenott trial config in .env: ${missing.join(', ')}`);
   }
-  try {
-    return JSON.parse(raw);
-  } catch {
-    throw new Error('GOLDENOTT_PACKAGE_MAP in .env is not valid JSON.');
-  }
-}
 
-function resolvePackageConfig(packageId) {
-  const map = getPackageMap();
-  const config = map[packageId];
-  if (!config) {
-    throw new Error(
-      `Unknown package "${packageId}" — add it to GOLDENOTT_PACKAGE_MAP in .env. ` +
-        `Known packages: ${Object.keys(map).join(', ') || '(none configured)'}`
-    );
-  }
-  return config;
-}
-
-function buildRequestBody({ username, password, customerName, packageConfig }) {
   return {
-    package_id: packageConfig.package_id,
-    template_id: packageConfig.template_id,
-    dns_domain_id: packageConfig.dns_domain_id,
-    tv_domain_id: packageConfig.tv_domain_id,
+    package_id: Number(process.env.GOLDENOTT_TRIAL_PACKAGE_ID),
+    template_id: Number(process.env.GOLDENOTT_TRIAL_TEMPLATE_ID),
+    dns_domain_id: Number(process.env.GOLDENOTT_TRIAL_DNS_DOMAIN_ID),
+    tv_domain_id: Number(process.env.GOLDENOTT_TRIAL_TV_DOMAIN_ID),
+    max_connections: Number(process.env.GOLDENOTT_TRIAL_MAX_CONNECTIONS || 1),
+  };
+}
+
+function buildRequestBody({ username, password, customerName, trialConfig }) {
+  return {
+    package_id: trialConfig.package_id,
+    template_id: trialConfig.template_id,
+    dns_domain_id: trialConfig.dns_domain_id,
+    tv_domain_id: trialConfig.tv_domain_id,
     username,
     password,
     is_adult: false,
-    max_connections: packageConfig.max_connections || 1,
-    notes: customerName,
+    max_connections: trialConfig.max_connections,
+    notes: `Essai 24h - ${customerName}`,
   };
 }
 
@@ -83,15 +79,13 @@ function parseResponse(body) {
 }
 
 /**
- * Creates a new IPTV line on Goldenott and returns { login, password, url }.
+ * Creates a free 24h trial line on Goldenott and returns { login, password, url }.
  *
  * @param {Object} params
  * @param {string} params.customerName
  * @param {string} [params.usernameHint] preferred base for the generated username
- * @param {string} params.packageId site-side plan key (e.g. "essentiel", "premium", "famille") —
- *   must have a matching entry in GOLDENOTT_PACKAGE_MAP.
  */
-export async function createGoldenottLine({ customerName, usernameHint, packageId }) {
+export async function createGoldenottTrialLine({ customerName, usernameHint }) {
   const baseUrl = process.env.GOLDENOTT_API_BASE_URL;
   if (!baseUrl || !process.env.GOLDENOTT_API_KEY) {
     throw new Error(
@@ -99,7 +93,7 @@ export async function createGoldenottLine({ customerName, usernameHint, packageI
     );
   }
 
-  const packageConfig = resolvePackageConfig(packageId);
+  const trialConfig = getTrialConfig();
 
   const username =
     (usernameHint || 'kel').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 10) +
@@ -112,7 +106,7 @@ export async function createGoldenottLine({ customerName, usernameHint, packageI
       'Content-Type': 'application/json',
       'X-API-Key': process.env.GOLDENOTT_API_KEY,
     },
-    body: JSON.stringify(buildRequestBody({ username, password, customerName, packageConfig })),
+    body: JSON.stringify(buildRequestBody({ username, password, customerName, trialConfig })),
   });
 
   const body = await response.json().catch(() => ({}));

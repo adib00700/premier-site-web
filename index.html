@@ -198,7 +198,7 @@
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Catalogue complet</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Support par email</li>
                     </ul>
-                    <a href="#commande" class="btn btn-ghost btn-block" data-package="essentiel">Choisir Essentiel</a>
+                    <a href="#commande" class="btn btn-ghost btn-block">Choisir Essentiel</a>
                 </div>
 
                 <div class="plan featured reveal">
@@ -217,7 +217,7 @@
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Support prioritaire 24/7</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Garantie 7 jours</li>
                     </ul>
-                    <a href="#commande" class="btn btn-primary btn-block" data-package="premium">Choisir Premium</a>
+                    <a href="#commande" class="btn btn-primary btn-block">Choisir Premium</a>
                 </div>
 
                 <div class="plan reveal">
@@ -234,7 +234,7 @@
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Support prioritaire 24/7</li>
                         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg> Garantie 7 jours</li>
                     </ul>
-                    <a href="#commande" class="btn btn-ghost btn-block" data-package="famille">Choisir Famille</a>
+                    <a href="#commande" class="btn btn-ghost btn-block">Choisir Famille</a>
                 </div>
             </div>
         </div>
@@ -244,9 +244,9 @@
     <section class="section" id="commande">
         <div class="container">
             <div class="section-head reveal">
-                <span class="eyebrow" style="justify-content:center">Dernière étape</span>
-                <h2>Recevez vos accès <span class="gold-text">directement sur WhatsApp.</span></h2>
-                <p>Indiquez votre numéro WhatsApp, choisissez votre formule : vos identifiants et votre lien de connexion arrivent en quelques minutes.</p>
+                <span class="eyebrow" style="justify-content:center">Essai gratuit</span>
+                <h2>Testez 24h <span class="gold-text">directement sur WhatsApp.</span></h2>
+                <p>Indiquez votre numéro WhatsApp : un identifiant, un mot de passe et un lien de connexion valables 24h vous sont envoyés en quelques minutes.</p>
             </div>
 
             <form id="order-form" class="order-form reveal">
@@ -258,15 +258,7 @@
                     <label for="order-phone">Numéro WhatsApp (avec indicatif)</label>
                     <input id="order-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Ex. +33612345678">
                 </div>
-                <div class="order-field">
-                    <label for="order-package">Formule</label>
-                    <select id="order-package" name="packageId" required>
-                        <option value="essentiel">Essentiel</option>
-                        <option value="premium" selected>Premium</option>
-                        <option value="famille">Famille</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Recevoir mes accès sur WhatsApp</button>
+                <button type="submit" class="btn btn-primary btn-block">Recevoir mon essai gratuit sur WhatsApp</button>
                 <p class="order-status" id="order-status" role="status" aria-live="polite"></p>
             </form>
         </div>

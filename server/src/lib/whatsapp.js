@@ -44,6 +44,8 @@ async function callGraphApi(body) {
  * The template must be created and approved beforehand in Meta Business
  * Manager > WhatsApp Manager > Message Templates, with 4 body variables in
  * this order: {{1}} customer name, {{2}} login, {{3}} password, {{4}} url.
+ * Example approved body: "Bonjour {{1}}, voici votre essai gratuit 24h
+ * Keloar.com : identifiant {{2}}, mot de passe {{3}}, lien {{4}}."
  */
 export async function sendCredentialsTemplate({ phone, customerName, login, password, url }) {
   return callGraphApi({
@@ -51,7 +53,7 @@ export async function sendCredentialsTemplate({ phone, customerName, login, pass
     to: normalizePhone(phone),
     type: 'template',
     template: {
-      name: process.env.WHATSAPP_TEMPLATE_NAME || 'iptv_credentials_delivery',
+      name: process.env.WHATSAPP_TEMPLATE_NAME || 'iptv_trial_delivery',
       language: { code: process.env.WHATSAPP_TEMPLATE_LANG || 'fr' },
       components: [
         {
@@ -75,7 +77,7 @@ export async function sendCredentialsTemplate({ phone, customerName, login, pass
  */
 export async function sendCredentialsText({ phone, customerName, login, password, url }) {
   const text =
-    `Bonjour ${customerName}, voici vos accès Keloar.com :\n\n` +
+    `Bonjour ${customerName}, voici votre essai gratuit 24h Keloar.com :\n\n` +
     `Identifiant : ${login}\n` +
     `Mot de passe : ${password}\n` +
     `URL de connexion : ${url}\n\n` +
