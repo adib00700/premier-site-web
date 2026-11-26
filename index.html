@@ -443,11 +443,11 @@
 
     <div data-reveal style="--d:.15s">
       <!--
-        Pour recevoir réellement les messages, collez l'URL d'un service de formulaire
-        (ex. Formspree : https://formspree.io/f/VOTRE_ID) dans data-endpoint.
-        Sans URL, le formulaire affiche seulement le message de confirmation (mode démo).
+        Envoi des demandes par courriel via FormSubmit (formsubmit.co), sans compte.
+        Les demandes arrivent sur info@keloar.com. Pour changer d'adresse, modifiez data-endpoint.
+        La toute première demande déclenche un courriel d'activation de FormSubmit : cliquez le lien reçu.
       -->
-      <form id="quote-form" novalidate data-endpoint="">
+      <form id="quote-form" novalidate data-endpoint="https://formsubmit.co/ajax/info@keloar.com">
         <div class="form-row">
           <div class="field">
             <label for="nom">Nom et prénom <span class="req" aria-hidden="true">*</span></label>
@@ -507,6 +507,9 @@
           <label for="rgpd">J'accepte que mes renseignements personnels soient utilisés pour me recontacter au sujet de ma demande, conformément à la <a href="confidentialite.html">politique de confidentialité</a>. <span class="req" aria-hidden="true">*</span></label>
           <span class="error-msg" id="rgpd-error">Votre accord est nécessaire pour traiter votre demande.</span>
         </div>
+        <input type="hidden" name="_subject" value="Nouvelle demande de soumission — keloar.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_honey" value="">
         <div class="sr-only" aria-hidden="true">
           <label for="site_web">Ne pas remplir</label>
           <input type="text" id="site_web" name="site_web" tabindex="-1" autocomplete="off">

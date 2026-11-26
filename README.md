@@ -87,10 +87,17 @@ Remplacez les fichiers de `images/` en gardant les mêmes noms (format WebP cons
 1600 px de large maximum, `cwebp photo.jpg -q 80 -o photo.webp`).
 
 ### Formulaire de contact
-Sans configuration, le formulaire valide les champs puis affiche la confirmation
-(mode démo) : **aucun message n'est envoyé**. Pour recevoir les demandes, créez un
-formulaire gratuit sur [Formspree](https://formspree.io) et collez son URL dans
-`data-endpoint=""` du formulaire `#quote-form` de `index.html`.
+Les demandes sont envoyées par courriel à **info@keloar.com** grâce à
+[FormSubmit](https://formsubmit.co) (gratuit, sans compte), via l'attribut
+`data-endpoint` du formulaire `#quote-form` dans `index.html`.
+
+- **Activation (une seule fois)** : envoyez une première demande depuis le site, puis
+  cliquez sur le lien « Activate Form » reçu de FormSubmit sur info@keloar.com.
+  Avant cette activation, aucune demande n'est transmise.
+- **Changer d'adresse** : remplacez l'adresse à la fin de
+  `https://formsubmit.co/ajax/info@keloar.com` (une nouvelle activation sera demandée).
+- **Masquer l'adresse** : après l'activation, FormSubmit fournit un identifiant aléatoire
+  qui peut remplacer l'adresse courriel dans l'URL.
 
 ### Statistiques de visites
 Le site ne dépose aucun témoin de suivi. Si vous ajoutez un outil de mesure d'audience,

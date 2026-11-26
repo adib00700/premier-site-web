@@ -386,7 +386,8 @@
       var endpoint = form.getAttribute('data-endpoint');
       if (!endpoint) { setTimeout(done, 600); return; } // mode démo
       fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
-        .then(function (r) { if (!r.ok) throw new Error(r.status); done(); })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json().catch(function () { return {}; }); })
+        .then(function (data) { if (data && String(data.success) === 'false') throw new Error(data.message || 'refus'); done(); })
         .catch(function () {
           btn.disabled = false;
           if (label) label.textContent = 'Envoyer ma demande';
