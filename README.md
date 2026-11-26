@@ -33,7 +33,7 @@ CNAME                   Domaine keloar.com
 - **Manifeste** : le texte s'allume mot par mot au fil du défilement.
 - **Services** : au survol, une photo suit la souris (ordinateur uniquement).
 - **Méthode** : défilement horizontal des 4 étapes (avec photos) sur grand écran, empilé sur mobile.
-- **Galerie** : deux rangées de photos qui glissent en sens inverse au défilement.
+- **Galerie** : deux rangées de photos qui défilent en continu, en sens inverse (pause au survol).
 - **Fond du haut de page** : dégradé mauve et jaune qui ondule lentement.
 - **Détails** : curseur personnalisé, boutons « magnétiques », badge rond qui tourne,
   bandeau défilant, barre de progression de lecture, en-tête qui se cache en descendant,
