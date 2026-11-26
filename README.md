@@ -60,7 +60,7 @@ dans les deux pages légales : pensez à les modifier aux trois endroits.
 En haut de `css/style.css` :
 
 ```css
---bg: #f2eadc;         /* beige, fond principal */
+--bg: #ffffff;         /* blanc, fond principal */
 --bg-alt: #e9deeb;     /* mauve pâle (galerie, méthode, avis) */
 --bg-yellow: #f5e6b8;  /* jaune pâle (tarifs, FAQ) */
 --text: #2b2030;       /* aubergine, texte et sections sombres */
