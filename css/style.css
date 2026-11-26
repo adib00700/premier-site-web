@@ -534,6 +534,52 @@ em { font-style: italic; color: var(--accent); }
 .prose a { color: var(--accent); }
 .prose .note { background: var(--accent-soft); border-left: 2px solid var(--accent); padding: 14px 18px; color: var(--text); }
 
+/* ---------- Blogue ---------- */
+.blog-hero h1 { max-width: 14ch; }
+.posts { display: grid; gap: 40px; }
+.post-link { display: grid; gap: 28px; text-decoration: none; color: inherit; }
+@media (min-width: 900px) { .post-link { grid-template-columns: 1.2fr 1fr; align-items: center; gap: 56px; } }
+.post-media { aspect-ratio: 16 / 10; border-radius: 6px; }
+.post-link:hover .post-media img { transform: scale(1.22); transition: transform 1.2s var(--ease); }
+.post-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: .76rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.post-meta span { color: var(--accent); }
+.post-body h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin: 12px 0 16px; }
+.post-body p { color: var(--muted); }
+
+.article-hero { padding: calc(var(--header-h) + 56px) 0 48px; }
+.article-hero h1 { font-size: clamp(2.8rem, 7vw, 6rem); max-width: 16ch; margin-bottom: 28px; }
+.article-lead { font-size: 1.25rem; color: var(--muted); max-width: 640px; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.article-cover { margin: 0 0 64px; aspect-ratio: 21 / 9; border-radius: 6px; }
+@media (max-width: 700px) { .article-cover { aspect-ratio: 4 / 3; } }
+.article-layout { display: grid; gap: 40px; padding-bottom: 40px; }
+@media (min-width: 1024px) { .article-layout { grid-template-columns: 240px 1fr; gap: 80px; } .article-toc { position: sticky; top: 110px; align-self: start; } }
+.article-toc ol { display: grid; gap: 10px; counter-reset: toc; }
+.article-toc li { counter-increment: toc; }
+.article-toc a { display: flex; gap: 10px; text-decoration: none; color: var(--muted); font-size: .95rem; }
+.article-toc a::before { content: counter(toc, decimal-leading-zero); color: var(--accent); font-variant-numeric: tabular-nums; }
+.article-toc a:hover { color: var(--text); }
+.article-body { max-width: 720px; font-size: 1.1rem; }
+.article-body p, .article-body li { color: var(--text); opacity: .88; }
+.article-body h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); margin: 2em 0 .6em; scroll-margin-top: 100px; }
+.article-body h2:first-child { margin-top: 0; }
+.article-body h3 { font-size: 1.5rem; margin: 1.6em 0 .4em; }
+.article-body ol { list-style: decimal; padding-left: 1.3em; margin-bottom: 1em; }
+.article-body ol li { margin-bottom: .6em; }
+.callout { background: var(--bg-alt); border-left: 3px solid var(--accent); border-radius: 6px; padding: 24px 28px; margin: 28px 0; }
+.callout ul { margin-bottom: 1em; }
+.callout p:last-child { margin-bottom: 0; }
+.callout-title { font-family: var(--serif); font-size: 1.6rem; line-height: 1.15; margin-bottom: 12px; opacity: 1 !important; }
+.callout-cta { background: var(--bg-yellow); border-left-color: var(--yellow); }
+.callout-cta .btn { margin-top: 8px; }
+.table-wrap { overflow-x: auto; margin: 24px 0; }
+.article-body table { width: 100%; border-collapse: collapse; font-size: 1rem; min-width: 520px; }
+.article-body th, .article-body td { text-align: left; vertical-align: top; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--line); }
+.article-body thead th { font-size: .76rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); border-bottom-color: var(--text); }
+.article-body tbody th { font-family: var(--serif); font-weight: 400; font-size: 1.25rem; white-space: nowrap; }
+.cta-band { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; padding: 48px 40px; border-radius: 6px; background: var(--bg-alt); }
+.cta-band h2 { margin: 0; font-size: clamp(2.2rem, 5vw, 3.8rem); }
+
 /* ---------- 20. Mouvement réduit ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
