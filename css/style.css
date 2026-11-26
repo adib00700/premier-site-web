@@ -262,7 +262,7 @@ em { font-style: italic; color: var(--accent); }
 /* ---------- 9. Manifeste ---------- */
 .manifesto-text { font-family: var(--serif); font-size: clamp(2.1rem, 5.2vw, 4.8rem); line-height: 1.07; letter-spacing: -.015em; margin: 0; max-width: 21ch; }
 .mw { transition: opacity .5s ease; }
-.js .manifesto-text .mw { opacity: .14; }
+.js .manifesto-text .mw { opacity: .32; }
 .js .manifesto-text .mw.is-on { opacity: 1; }
 .manifesto-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; margin-top: 72px; padding-top: 24px; border-top: 1px solid var(--ink-line); color: var(--ink-muted); }
 .manifesto-foot .link-arrow { color: var(--ink-text); }

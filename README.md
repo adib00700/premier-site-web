@@ -104,6 +104,26 @@ Le site ne dépose aucun témoin de suivi. Si vous ajoutez un outil de mesure d'
 la Loi 25 exige de demander le consentement avant de l'activer, et de mettre à jour
 `confidentialite.html`.
 
+## Référencement (SEO)
+
+Déjà en place :
+- titre et description optimisés pour « création de site web Montréal » ;
+- données structurées Schema.org : entreprise locale (adresse, téléphone, horaires),
+  les 3 forfaits avec leurs prix, et la FAQ (peut s'afficher directement dans Google) ;
+- balises de partage (Facebook, LinkedIn, WhatsApp…) avec image `images/og-image.png` ;
+- `sitemap.xml`, `robots.txt`, page `404.html`, adresses canoniques ;
+- site rapide : photos WebP, polices non bloquantes, image du haut préchargée.
+
+À faire de votre côté (gratuit, ce sont les deux actions les plus utiles) :
+1. **Google Search Console** (search.google.com/search-console) : ajoutez keloar.com,
+   validez-le, puis soumettez `https://keloar.com/sitemap.xml`.
+2. **Fiche Google Business Profile** (business.google.com) : créez la fiche « Keloar »,
+   catégorie « Concepteur de sites Web », zone desservie Montréal, avec le même
+   téléphone et site. C'est ce qui fait apparaître l'entreprise sur Google Maps.
+
+Quand vous aurez de vrais comptes Instagram, Facebook ou LinkedIn, ajoutez-les dans
+`sameAs` des données structurées (haut de `index.html`).
+
 ## Mettre en ligne
 
 Toute modification envoyée sur la branche `master` est publiée automatiquement sur

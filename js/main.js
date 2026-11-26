@@ -56,7 +56,7 @@
   var introDone = new Promise(function (resolve) {
     if (!loader || reduce) { if (loader) loader.classList.add('is-done'); root.classList.add('is-loaded'); resolve(); return; }
     var seen = session.get('keloar-intro');
-    var minTime = seen ? 250 : 1500;
+    var minTime = seen ? 200 : 1000;
     var start = Date.now();
     var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
     var timeout = new Promise(function (r) { setTimeout(r, 2500); });

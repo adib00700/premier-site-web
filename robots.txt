@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+# Anciens exercices, sans rapport avec Keloar
+Disallow: /exercice/
+# Anciennes adresses, redirigées vers l'accueil
+Disallow: /a-propos.html
+Disallow: /contact.html
 
 Sitemap: https://keloar.com/sitemap.xml
