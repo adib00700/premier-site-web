@@ -124,7 +124,7 @@ Recadrées et converties en WebP :
 | `galerie-restaurant.webp` | https://images.unsplash.com/photo-1517248135467-4c7edcad34c4 |
 | `galerie-ville.webp` | https://images.unsplash.com/photo-1559682468-a6a29e7d9517 |
 | `galerie-equipe.webp`, `etape-1.webp` | https://images.unsplash.com/photo-1522202176988-66273c2fd55f |
-| `galerie-bureau.webp` | https://images.unsplash.com/photo-1499951360447-b19be8fe80f5 |
+| `galerie-bureau.webp`, `hero-fond.webp` (flouté) | https://images.unsplash.com/photo-1499951360447-b19be8fe80f5 |
 | `galerie-cafe.webp` | https://images.unsplash.com/photo-1556740749-887f6717d7e4 |
 | `galerie-design.webp` | https://images.unsplash.com/photo-1558655146-9f40138edfeb |
 | `galerie-espace.webp` | https://images.unsplash.com/photo-1497215728101-856f4ea42174 |

@@ -211,6 +211,11 @@ em { font-style: italic; color: var(--accent); }
 
 /* ---------- 8. Hero ---------- */
 .hero { padding: calc(var(--header-h) + 48px) 0 0; position: relative; isolation: isolate; overflow: hidden; }
+/* Image de fond floutée qui évoque le métier, avec un léger zoom lent */
+.hero-bg { position: absolute; inset: 0 0 auto 0; height: 100%; z-index: -2; overflow: hidden; pointer-events: none; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .7; transform: scale(1.08); animation: hero-zoom 30s ease-in-out infinite alternate; }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 55%, transparent) 0%, color-mix(in srgb, var(--bg) 25%, transparent) 70%), linear-gradient(180deg, transparent 55%, var(--bg) 95%); }
+@keyframes hero-zoom { to { transform: scale(1.18) translate3d(-1.5%, -1%, 0); } }
 /* Fond dégradé mauve / jaune qui ondule lentement derrière le titre */
 .hero::before {
   content: ""; position: absolute; z-index: -1; left: -15%; right: -15%; top: -10%; height: 95%;
@@ -537,4 +542,5 @@ em { font-style: italic; color: var(--accent); }
   .js .manifesto-text .mw { opacity: 1; }
   .js .loader, .cursor, .svc-preview { display: none; }
   .gallery-row { transform: none !important; }
+  .hero-bg img { animation: none; }
 }
