@@ -212,9 +212,10 @@ em { font-style: italic; color: var(--accent); }
 /* ---------- 8. Hero ---------- */
 .hero { padding: calc(var(--header-h) + 48px) 0 0; position: relative; isolation: isolate; overflow: hidden; }
 /* Image de fond floutée qui évoque le métier, avec un léger zoom lent */
-.hero-bg { position: absolute; inset: 0 0 auto 0; height: 100%; z-index: -2; overflow: hidden; pointer-events: none; }
-.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: .7; transform: scale(1.08); animation: hero-zoom 30s ease-in-out infinite alternate; }
-.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 55%, transparent) 0%, color-mix(in srgb, var(--bg) 25%, transparent) 70%), linear-gradient(180deg, transparent 55%, var(--bg) 95%); }
+.hero-bg { position: absolute; inset: 0 0 auto 0; height: min(100%, 980px); z-index: -2; overflow: hidden; pointer-events: none; }
+.hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 1; transform: scale(1.08); animation: hero-zoom 30s ease-in-out infinite alternate; }
+.hero-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, color-mix(in srgb, var(--bg) 72%, transparent) 0%, color-mix(in srgb, var(--bg) 45%, transparent) 45%, color-mix(in srgb, var(--bg) 5%, transparent) 100%), linear-gradient(180deg, transparent 45%, var(--bg) 90%); }
+@media (max-width: 700px) { .hero-bg::after { background: linear-gradient(180deg, color-mix(in srgb, var(--bg) 55%, transparent) 0%, color-mix(in srgb, var(--bg) 70%, transparent) 55%, var(--bg) 92%); } }
 @keyframes hero-zoom { to { transform: scale(1.18) translate3d(-1.5%, -1%, 0); } }
 /* Fond dégradé mauve / jaune qui ondule lentement derrière le titre */
 .hero::before {
