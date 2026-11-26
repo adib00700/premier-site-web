@@ -269,7 +269,7 @@
         .catch(function () {
           btn.disabled = false;
           btn.textContent = 'Envoyer ma demande';
-          alert('Désolé, l\'envoi a échoué. Réessayez ou écrivez-nous à bonjour@keloar.com.');
+          alert('Désolé, l\'envoi a échoué. Réessayez ou écrivez-nous à info@keloar.com.');
         });
     });
   }
