@@ -399,6 +399,7 @@ em { font-style: italic; color: var(--accent); }
 .plan.featured .plan-desc, .plan.featured .price small { color: var(--ink-muted); }
 .price { font-family: var(--serif); font-size: clamp(3.6rem, 6vw, 5rem); line-height: 1; margin: 0; letter-spacing: -.025em; }
 .price small { font-family: var(--sans); font-size: .95rem; color: var(--muted); margin-left: 8px; letter-spacing: 0; }
+.price small.from { display: block; margin: 0 0 8px; font-size: .78rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
 .checklist { margin: 32px 0 36px; flex: 1; }
 .checklist li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-bottom: 1px solid var(--line); }
 .checklist li:first-child { border-top: 1px solid var(--line); }
