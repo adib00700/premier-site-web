@@ -169,6 +169,6 @@ Recadrées et converties en WebP :
 | `etape-2.webp` | https://images.unsplash.com/photo-1586717791821-3f44a563fa4c |
 | `etape-3.webp` | https://images.unsplash.com/photo-1519389950473-47ba0277781c |
 | `etape-4.webp` | https://images.unsplash.com/photo-1527192491265-7e15c55b1ed2 |
-| `projet-ecommerce.webp` | https://images.unsplash.com/photo-1563013544-824ae1b704d3 |
+| `projet-ecommerce.webp` | Maquette originale (boutique fictive « Maison Sienne ») avec les photos Unsplash 1515886657613-9f3515b0c78f, 1505740420928-5e560c06d30e, 1523275335684-37898b6baf30, 1560343090-f0409e92791a, 1608571423902-eed4a5ad8108 |
 
 N'utilisez pas d'images trouvées sur Pinterest ou Google Images : elles appartiennent à leurs auteurs.
