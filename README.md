@@ -4,9 +4,8 @@ Site vitrine de **Keloar**, agence de création de sites web à Montréal, publi
 [keloar.com](https://keloar.com) via GitHub Pages (fichier `CNAME`).
 Fait en **HTML5, CSS3 et JavaScript vanilla** : aucune dépendance, aucune étape de compilation.
 
-> L'adresse, le téléphone, les prix, les projets du portfolio, les témoignages et l'équipe
-> sont des **exemples** à remplacer par vos vraies informations avant d'annoncer le site.
-> Le numéro 514 555-0100 est un numéro fictif.
+> Les prix, les projets du portfolio, les témoignages, les chiffres clés et l'équipe
+> sont des **exemples** à remplacer par vos vraies informations.
 
 ## Contenu
 
@@ -51,7 +50,6 @@ répétés dans chaque page : modifiez les 5 fichiers (un « Rechercher / Rempla
 les fichiers » de votre éditeur suffit).
 
 À remplacer en priorité :
-- adresse, téléphone, courriel (pages HTML + bloc JSON-LD en haut de `index.html`) ;
 - prix des forfaits (section `#tarifs` de `index.html` et la FAQ) ;
 - projets, témoignages et équipe ;
 - les champs entre [crochets] dans `mentions-legales.html` (NEQ, TPS/TVQ…) et
