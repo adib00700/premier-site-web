@@ -1,14 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Maquette du site Boulangerie Martin">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Maquette du site Boulangerie Gagnon">
 <rect width="800" height="500" fill="#f3f4f6"/>
 <rect x="0" y="0" width="800" height="56" fill="#fff"/>
 <circle cx="70" cy="28" r="12" fill="#b45309"/>
-<text x="92" y="34" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="17" fill="#111827">Boulangerie Martin</text>
+<text x="92" y="34" font-family="Inter,Arial,sans-serif" font-weight="700" font-size="17" fill="#111827">Boulangerie Gagnon</text>
 <rect x="470" y="22" width="50" height="10" rx="5" fill="#d1d5db"/><rect x="535" y="22" width="50" height="10" rx="5" fill="#d1d5db"/><rect x="600" y="22" width="50" height="10" rx="5" fill="#d1d5db"/>
 <rect x="670" y="16" width="70" height="24" rx="12" fill="#b45309"/>
 <rect x="0" y="56" width="800" height="250" fill="#b45309"/>
 <circle cx="640" cy="180" r="120" fill="#fde68a" opacity=".35"/>
 <circle cx="720" cy="90" r="60" fill="#fde68a" opacity=".25"/>
-<text x="70" y="150" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">Boulangerie Martin</text>
+<text x="70" y="150" font-family="Inter,Arial,sans-serif" font-weight="800" font-size="40" fill="#fff">Boulangerie Gagnon</text>
 <text x="70" y="188" font-family="Inter,Arial,sans-serif" font-size="20" fill="#fde68a">Artisan depuis 1985</text>
 <rect x="70" y="220" width="150" height="42" rx="21" fill="#fde68a"/>
 <rect x="236" y="220" width="130" height="42" rx="21" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width="2"/>
