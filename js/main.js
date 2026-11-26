@@ -168,6 +168,7 @@
   var process = $('.process');
   var processTrack = process ? $('.process-track', process) : null;
   var processBar = process ? $('.process-bar span', process) : null;
+  var galleryRows = reduce ? [] : $$('.gallery-row');
   var lastY = window.scrollY;
   var ticking = false;
   var horizontal = false;
@@ -193,6 +194,15 @@
       var speed = parseFloat(el.getAttribute('data-speed')) || 0.1;
       var offset = (box.top + box.height / 2 - vh / 2) * -speed;
       el.style.transform = 'translate3d(0,' + offset.toFixed(1) + 'px,0) scale(1.18)';
+    });
+
+    /* Galerie : les deux rangées glissent en sens inverse */
+    galleryRows.forEach(function (row) {
+      var g = row.parentElement.getBoundingClientRect();
+      if (g.bottom < 0 || g.top > vh) return;
+      var gp = clamp((vh - g.top) / (vh + g.height), 0, 1);
+      var dir = parseFloat(row.getAttribute('data-dir')) || 1;
+      row.style.transform = 'translate3d(' + (dir * gp * window.innerWidth * 0.22).toFixed(1) + 'px,0,0)';
     });
 
     /* 9. Manifeste : les mots s'allument au fil de la lecture */
