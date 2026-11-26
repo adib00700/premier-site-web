@@ -132,6 +132,8 @@
     btn.addEventListener('click', function () {
       var filter = btn.getAttribute('data-filter');
       filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      var grid = $('#projects');
+      if (grid) grid.classList.toggle('is-filtered', filter !== 'tous');
       $$('.project').forEach(function (p) {
         var show = filter === 'tous' || p.getAttribute('data-category') === filter;
         p.classList.toggle('is-hidden', !show);
@@ -148,7 +150,8 @@
     var index = 0;
     var timer = null;
 
-    var dots = slides.map(function (_, i) {
+    var counter = $('[data-current]', carousel);
+    var dots = !dotsWrap ? [] : slides.map(function (_, i) {
       var d = document.createElement('button');
       d.type = 'button';
       d.className = 'dot';
@@ -164,6 +167,7 @@
       track.style.transform = 'translateX(' + (-index * 100) + '%)';
       slides.forEach(function (s, n) { s.setAttribute('aria-hidden', String(n !== index)); });
       dots.forEach(function (d, n) { d.setAttribute('aria-selected', String(n === index)); });
+      if (counter) counter.textContent = String(index + 1).padStart(2, '0');
     }
     function restart() {
       if (timer) clearInterval(timer);

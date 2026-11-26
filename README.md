@@ -60,12 +60,14 @@ les fichiers » de votre éditeur suffit).
 En haut de `css/style.css` :
 
 ```css
---primary: #4f46e5;    /* couleur principale */
---secondary: #10b981;  /* couleur secondaire */
+--bg: #f4efe7;      /* fond crème */
+--text: #1b1814;    /* encre */
+--accent: #b4462a;  /* terracotta */
 ```
 
-Les mêmes variables existent pour le mode sombre juste en dessous. Pour changer de police,
-remplacez `Inter` dans le lien Google Fonts de chaque page et dans `--font`.
+Les mêmes variables existent pour le mode sombre juste en dessous. Polices : *Instrument Serif*
+(titres) et *Inter Tight* (textes), chargées depuis Google Fonts dans chaque page et
+déclarées dans `--serif` et `--sans`.
 
 ### Images
 - Remplacez les fichiers de `images/` en gardant les mêmes noms, ou changez les `src`.
@@ -108,13 +110,13 @@ Recadrées et converties en WebP :
 
 | Fichier | Photo d'origine |
 |---|---|
-| `hero-site.webp` | https://images.unsplash.com/photo-1460925895917-afdab827c52f |
+| `hero.webp` | https://images.unsplash.com/photo-1498050108023-c5249f4df085 |
 | `projet-boulangerie.webp` | https://images.unsplash.com/photo-1517433670267-08bbd4be890f |
 | `projet-mode.webp` | https://images.unsplash.com/photo-1441986300917-64674bd600d8 |
 | `projet-cabinet.webp` | https://images.unsplash.com/photo-1589829545856-d10d557cf95f |
 | `projet-yoga.webp` | https://images.unsplash.com/photo-1544367567-0f2fcb009e0b |
 | `projet-fromagerie.webp` | https://images.unsplash.com/photo-1452195100486-9cc805987862 |
 | `projet-artisan.webp` | https://images.unsplash.com/photo-1503387762-592deb58ef4e |
-| `atelier.webp` | https://images.unsplash.com/photo-1498050108023-c5249f4df085 |
+| `atelier.webp` | https://images.unsplash.com/photo-1460925895917-afdab827c52f |
 
 N'utilisez pas d'images trouvées sur Pinterest ou Google Images : elles appartiennent à leurs auteurs.
