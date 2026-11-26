@@ -124,6 +124,17 @@ Déjà en place :
 Quand vous aurez de vrais comptes Instagram, Facebook ou LinkedIn, ajoutez-les dans
 `sameAs` des données structurées (haut de `index.html`).
 
+## Blogue
+
+- Page du blogue : `blog/index.html` (liste des articles, le plus récent en premier).
+- Premier article : `blog/prix-site-web-montreal.html` (« Combien coûte un site web à
+  Montréal en 2026 ? »).
+- Pour un nouvel article : copiez `blog/prix-site-web-montreal.html` sous un nouveau nom
+  (ex. `blog/site-web-restaurant-montreal.html`), changez le titre, la description,
+  le texte et les données structurées en haut de la page ; ajoutez une carte dans
+  `blog/index.html` et une ligne dans `sitemap.xml`.
+- Idéalement, publiez un article par mois sur une question que vos clients se posent.
+
 ## Mettre en ligne
 
 Toute modification envoyée sur la branche `master` est publiée automatiquement sur
