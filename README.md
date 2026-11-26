@@ -1,106 +1,89 @@
-# Keloar — Site vitrine de l'agence web (Montréal)
+# Keloar — Landing page de l'agence web (Montréal)
 
-Site vitrine de **Keloar**, agence de création de sites web à Montréal, publié sur
-[keloar.com](https://keloar.com) via GitHub Pages (fichier `CNAME`).
-Fait en **HTML5, CSS3 et JavaScript vanilla** : aucune dépendance, aucune étape de compilation.
+Site de **Keloar**, agence de création de sites web à Montréal, publié sur
+[keloar.com](https://keloar.com) par GitHub Pages (déploiement automatique à chaque
+modification de `master`, voir `.github/workflows/static.yml`).
 
-> Les prix, les projets du portfolio, les témoignages, les chiffres clés et l'équipe
-> sont des **exemples** à remplacer par vos vraies informations.
+Une seule page élégante et animée, en **HTML, CSS et JavaScript vanilla** : aucune
+bibliothèque, aucune étape de compilation.
 
 ## Contenu
 
 ```
-index.html              Accueil : hero, chiffres, services, méthode, réalisations,
-                        tarifs, témoignages, FAQ, appel à l'action
-a-propos.html           Histoire, valeurs, équipe
-contact.html            Formulaire de soumission + coordonnées, heures, carte
-mentions-legales.html   Modèle de mentions légales (Québec, à compléter)
-confidentialite.html    Politique de confidentialité et témoins (Loi 25, à compléter)
-css/style.css           Tous les styles (variables de couleurs en haut du fichier)
-js/main.js              Menu, thème sombre, animations, filtres, carrousel, FAQ,
-                        validation du formulaire, bandeau témoins
-images/                 Illustrations temporaires (SVG), favicon, image de partage
+index.html              La landing page : accueil, approche, services, méthode,
+                        secteurs, engagements, tarifs, l'agence, FAQ, contact
+mentions-legales.html   Mentions légales (Québec, à compléter)
+confidentialite.html    Politique de confidentialité (Loi 25, à compléter)
+a-propos.html           Redirige vers index.html#agence (anciens liens)
+contact.html            Redirige vers index.html#contact (anciens liens)
+css/style.css           Tous les styles (couleurs en haut du fichier)
+js/main.js              Animations et interactions
+images/                 Photos (WebP), favicon, image de partage
 sitemap.xml, robots.txt Référencement
-CNAME                   Domaine personnalisé keloar.com (GitHub Pages)
-exercice/               Anciens exercices, sans lien avec le site
+CNAME                   Domaine keloar.com
 ```
 
-Fonctionnalités : mode clair/sombre (automatique + bouton), menu burger mobile,
-apparition au défilement, compteurs animés, filtres du portfolio, carrousel de témoignages
-(boutons, puces, glisser au doigt, pause au survol), FAQ en accordéon, validation du
-formulaire avec messages d'erreur, bandeau de témoins (cookies), carte Google Maps chargée
-seulement après consentement, données structurées Schema.org, balises Open Graph.
+## Animations
+
+- **Intro** : le logo apparaît lettre par lettre puis le rideau se lève (version courte
+  lors des visites suivantes dans la même session).
+- **Titres** : les mots glissent depuis le bas quand le titre arrive à l'écran.
+- **Photos** : dévoilement de bas en haut, puis léger effet de profondeur (parallaxe).
+- **Manifeste** : le texte s'allume mot par mot au fil du défilement.
+- **Services** : au survol, une photo suit la souris (ordinateur uniquement).
+- **Méthode** : défilement horizontal des 4 étapes sur grand écran, empilé sur mobile.
+- **Détails** : curseur personnalisé, boutons « magnétiques », badge rond qui tourne,
+  bandeau défilant, barre de progression de lecture, en-tête qui se cache en descendant,
+  grand logo animé en pied de page.
+
+Si l'utilisateur a activé « réduire les animations » dans son système, tout s'affiche
+directement, sans mouvement. Sans JavaScript, tout le contenu reste visible.
 
 ## Lancer le site en local
-
-Dans un terminal, à la racine du dépôt :
 
 ```bash
 python3 -m http.server 8000
 # puis ouvrez http://localhost:8000
 ```
 
-(ou l'extension **Live Server** de VS Code). Un double-clic sur `index.html` fonctionne aussi.
-
 ## Personnaliser
 
 ### Textes
-Les textes sont directement dans les fichiers `.html`. L'en-tête et le pied de page sont
-répétés dans chaque page : modifiez les 5 fichiers (un « Rechercher / Remplacer dans tous
-les fichiers » de votre éditeur suffit).
+Tout le contenu est dans `index.html`, section par section (repérez les commentaires
+`<!-- ===== SERVICES ===== -->`, etc.). L'en-tête et le pied de page sont aussi présents
+dans les deux pages légales : pensez à les modifier aux trois endroits.
 
-À remplacer en priorité :
-- prix des forfaits (section `#tarifs` de `index.html` et la FAQ) ;
-- projets, témoignages et équipe ;
-- les champs entre [crochets] dans `mentions-legales.html` (NEQ, TPS/TVQ…) et
-  `confidentialite.html` (responsable de la protection des renseignements personnels,
-  obligatoire selon la Loi 25).
-
-### Couleurs et police
+### Couleurs et polices
 En haut de `css/style.css` :
 
 ```css
 --bg: #f4efe7;      /* fond crème */
---text: #1b1814;    /* encre */
+--text: #161412;    /* encre */
 --accent: #b4462a;  /* terracotta */
 ```
 
-Les mêmes variables existent pour le mode sombre juste en dessous. Polices : *Instrument Serif*
-(titres) et *Inter Tight* (textes), chargées depuis Google Fonts dans chaque page et
-déclarées dans `--serif` et `--sans`.
+Les mêmes variables existent pour le mode sombre juste en dessous. Polices : *Instrument
+Serif* (titres) et *Inter Tight* (textes), chargées depuis Google Fonts.
 
 ### Images
-- Remplacez les fichiers de `images/` en gardant les mêmes noms, ou changez les `src`.
-- Pour vos photos, préférez le format **WebP** (≈ 1600 px de large max) : `cwebp photo.jpg -q 80 -o photo.webp`.
-- Gardez des attributs `alt` descriptifs, `width`/`height` et `loading="lazy"`.
-- L'équipe utilise des initiales en cercle : remplacez le `<div class="team-photo">` par
-  `<img class="team-photo" src="images/prenom.webp" alt="Prénom Nom" style="object-fit:cover">`.
-- `images/og-image.png` (1200×630) est l'image affichée lors d'un partage sur les réseaux.
+Remplacez les fichiers de `images/` en gardant les mêmes noms (format WebP conseillé,
+1600 px de large maximum, `cwebp photo.jpg -q 80 -o photo.webp`).
 
 ### Formulaire de contact
-Sans configuration, le formulaire valide les champs puis affiche le message de
-confirmation (mode démo) : **aucun message n'est envoyé**. Pour recevoir les demandes :
+Sans configuration, le formulaire valide les champs puis affiche la confirmation
+(mode démo) : **aucun message n'est envoyé**. Pour recevoir les demandes, créez un
+formulaire gratuit sur [Formspree](https://formspree.io) et collez son URL dans
+`data-endpoint=""` du formulaire `#quote-form` de `index.html`.
 
-1. Créez un formulaire gratuit sur [Formspree](https://formspree.io) (ou équivalent).
-2. Dans `contact.html`, collez son URL dans `data-endpoint=""` :
-   `<form id="quote-form" novalidate data-endpoint="https://formspree.io/f/VOTRE_ID">`
-
-### Carte Google Maps
-L'adresse est dans l'attribut `data-src` du bloc `#map` de `contact.html`.
-
-### Statistiques
-Ajoutez le script de votre outil (Plausible, Matomo, Google Analytics…) dans la fonction
-`loadAnalytics()` de `js/main.js` : il ne sera chargé qu'après acceptation des témoins.
+### Statistiques de visites
+Le site ne dépose aucun témoin de suivi. Si vous ajoutez un outil de mesure d'audience,
+la Loi 25 exige de demander le consentement avant de l'activer, et de mettre à jour
+`confidentialite.html`.
 
 ## Mettre en ligne
 
-Le site est servi par **GitHub Pages** depuis la branche `master` avec le domaine `keloar.com`
-(*Settings → Pages*). Fusionnez vos changements dans `master` : la mise à jour est en ligne
-en une à deux minutes.
-
-Après la mise en ligne : déclarez le site et `https://keloar.com/sitemap.xml` dans
-Google Search Console, et créez votre fiche Google Business Profile à Montréal pour le
-référencement local.
+Toute modification envoyée sur la branche `master` est publiée automatiquement sur
+keloar.com en une à deux minutes (onglet **Actions** du dépôt pour suivre).
 
 ## Crédits photos
 

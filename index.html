@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr-CA" class="no-js">
+<html lang="fr-CA">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,6 @@
 <meta name="description" content="Keloar, agence de création de sites web à Montréal : sites vitrines, transactionnels, refonte et SEO pour PME, travailleurs autonomes et commerçants. Soumission gratuite en 24 h.">
 <link rel="canonical" href="https://keloar.com/">
 <meta name="theme-color" content="#f4efe7">
-<!-- Open Graph / réseaux sociaux -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Keloar">
@@ -17,9 +16,9 @@
 <meta property="og:image" content="https://keloar.com/images/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<!-- Applique le thème avant l'affichage pour éviter un flash -->
 <script>
-  document.documentElement.classList.remove('no-js');
+  /* Active les animations et applique le thème choisi avant l'affichage */
+  document.documentElement.classList.add('js');
   try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,15 +58,20 @@
 </script>
 </head>
 <body>
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol><symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol><symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol><symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol></svg>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><symbol id="i-monitor" viewBox="0 0 24 24"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></symbol><symbol id="i-cart" viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol><symbol id="i-refresh" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></symbol><symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol><symbol id="i-palette" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></symbol><symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol><symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol><symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol><symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></symbol><symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol><symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol><symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol><symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></symbol><symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol><symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol><symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol><symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol><symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol><symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol><symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol><symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol><symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol><symbol id="i-trending" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></symbol><symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol><symbol id="i-rocket" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></symbol><symbol id="i-message" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol><symbol id="i-pen" viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></symbol></svg>
+<div class="loader" aria-hidden="true">
+  <div class="loader-word"><span style="--i:0">K</span><span style="--i:1">e</span><span style="--i:2">l</span><span style="--i:3">o</span><span style="--i:4">a</span><span style="--i:5">r</span><span style="--i:6">.</span></div>
+  <p class="loader-tag">Agence web — Montréal</p>
+</div>
 <a class="skip-link" href="#contenu">Aller au contenu</a>
-<header class="site-header" id="haut">
+<div class="progress" aria-hidden="true"></div>
+<header class="site-header">
   <div class="container nav">
-    <a href="index.html" class="logo" aria-label="Keloar, retour à l'accueil">Keloar<span class="logo-dot" aria-hidden="true">.</span></a>
+    <a href="#accueil" class="logo" aria-label="Keloar, retour en haut de l'accueil">Keloar<span aria-hidden="true">.</span></a>
     <nav aria-label="Navigation principale">
       <ul class="nav-menu" id="nav-menu">
-        <li><a href="index.html#accueil" aria-current="page">Accueil</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#realisations">Réalisations</a></li><li><a href="index.html#tarifs">Tarifs</a></li><li><a href="a-propos.html">À propos</a></li><li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html" class="btn btn-primary">Demander une soumission</a></li>
+        <li><a href="#services">Services</a></li><li><a href="#methode">Méthode</a></li><li><a href="#secteurs">Secteurs</a></li><li><a href="#tarifs">Tarifs</a></li><li><a href="#agence">L'agence</a></li><li><a href="#faq">FAQ</a></li>
+        <li class="nav-menu-cta"><a href="#contact" class="btn btn-primary">Demander une soumission</a></li>
       </ul>
     </nav>
     <div class="nav-actions">
@@ -75,7 +79,7 @@
         <svg class="icon icon-sm icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
         <svg class="icon icon-sm icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
       </button>
-      <a href="contact.html" class="btn btn-primary btn-sm nav-cta">Demander une soumission <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+      <a href="#contact" class="btn btn-primary btn-sm nav-cta magnetic">Parlons projet <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       <button class="icon-btn nav-burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
         <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
       </button>
@@ -86,40 +90,47 @@
 <!-- ===================== HERO ===================== -->
 <section class="hero" id="accueil" aria-labelledby="hero-title">
   <div class="container">
-    <div class="hero-meta reveal">
+    <div class="hero-kicker" data-reveal>
       <span>Agence web — Montréal (QC)</span>
-      <span><span class="dot-live" aria-hidden="true"></span>Soumission gratuite en 24 h</span>
+      <span><span class="live" aria-hidden="true"></span>Soumission gratuite en 24&nbsp;h</span>
     </div>
-    <h1 class="hero-title reveal" id="hero-title">Des sites web qui font <em>grandir</em> votre entreprise.</h1>
-    <div class="hero-bottom">
-      <p class="hero-lead reveal reveal-delay-1">Nous concevons des sites rapides, élégants et bien référencés, pensés pour transformer vos visiteurs en clients. Pour les PME, travailleurs autonomes et commerçants.</p>
-      <div class="hero-actions reveal reveal-delay-2">
-        <a href="contact.html" class="btn btn-primary">Demander une soumission <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        <a href="#realisations" class="btn btn-outline">Voir nos réalisations</a>
+    <h1 class="hero-title" id="hero-title" data-split>Des sites web qui font <em>grandir</em> votre entreprise.</h1>
+    <div class="hero-row">
+      <p class="hero-lead" data-reveal style="--d:.35s">Nous concevons des sites rapides, élégants et bien référencés, pensés pour transformer vos visiteurs en clients. Pour les PME, travailleurs autonomes et commerçants.</p>
+      <div class="hero-actions" data-reveal style="--d:.5s">
+        <a href="#contact" class="btn btn-primary magnetic">Demander une soumission <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a href="#services" class="link-arrow">Découvrir nos services <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
       </div>
     </div>
-    <figure class="hero-figure reveal">
-      <img src="images/hero.webp" alt="Bureau lumineux avec un ordinateur portable ouvert sur du code" width="1800" height="771" fetchpriority="high" decoding="async">
-      <figcaption class="figcap"><span>Design, développement et référencement</span><span>Montréal, Québec</span></figcaption>
-    </figure>
   </div>
-
+  <div class="container hero-media">
+    <a class="badge magnetic" href="#contact" aria-label="Demander une soumission gratuite">
+      <svg class="ring" viewBox="0 0 100 100" aria-hidden="true">
+        <defs><path id="badge-circle" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs>
+        <text><textPath href="#badge-circle">Soumission gratuite · Réponse en 24&nbsp;h · </textPath></text>
+      </svg>
+      <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+    </a>
+    <div class="media" data-reveal-img style="--d:.3s">
+      <img src="images/hero.webp" alt="Bureau lumineux avec un ordinateur portable ouvert sur du code" width="1800" height="771" fetchpriority="high" decoding="async" data-speed="0.08">
+    </div>
+  </div>
   <div class="marquee" aria-hidden="true">
     <div class="marquee-track">
-      <span>Site vitrine</span><span>E-commerce</span><span>Refonte</span><span>Référencement</span><span>Maintenance</span><span>Identité visuelle</span>
-      <span>Site vitrine</span><span>E-commerce</span><span>Refonte</span><span>Référencement</span><span>Maintenance</span><span>Identité visuelle</span>
+      <span>Site vitrine</span><i></i><span>E-commerce</span><i></i><span>Refonte</span><i></i><span>Référencement</span><i></i><span>Maintenance</span><i></i><span>Identité visuelle</span><i></i>
+      <span>Site vitrine</span><i></i><span>E-commerce</span><i></i><span>Refonte</span><i></i><span>Référencement</span><i></i><span>Maintenance</span><i></i><span>Identité visuelle</span><i></i>
     </div>
   </div>
 </section>
 
-<!-- ===================== CHIFFRES CLÉS ===================== -->
-<section class="section" style="padding-bottom:0" aria-label="Chiffres clés">
+<!-- ===================== MANIFESTE ===================== -->
+<section class="section section-ink" id="approche" aria-label="Notre approche">
   <div class="container">
-    <div class="stats">
-      <div class="stat reveal"><strong><span data-count="120">120</span><small>+</small></strong><span>sites livrés</span></div>
-      <div class="stat reveal reveal-delay-1"><strong><span data-count="98">98</span><small>%</small></strong><span>de clients satisfaits</span></div>
-      <div class="stat reveal reveal-delay-2"><strong><span data-count="3">3</span><small>sem.</small></strong><span>de délai moyen</span></div>
-      <div class="stat reveal reveal-delay-3"><strong><span data-count="8">8</span><small>ans</small></strong><span>d'expérience</span></div>
+    <p class="label" data-reveal>Notre approche</p>
+    <p class="manifesto-text">Un site web n'est pas une simple vitrine. C'est votre meilleur vendeur, ouvert jour et nuit. Nous le concevons avec soin : rapide, élégant, pensé pour Google et surtout pour vos clients.</p>
+    <div class="manifesto-foot" data-reveal>
+      <span>Keloar — agence web à Montréal</span>
+      <a href="#methode" class="link-arrow">Voir notre méthode <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-down"/></svg></a>
     </div>
   </div>
 </section>
@@ -127,150 +138,127 @@
 <!-- ===================== SERVICES ===================== -->
 <section class="section" id="services" aria-labelledby="services-title">
   <div class="container">
-    <div class="section-top reveal">
-      <span class="label">(01) Services</span>
-      <h2 id="services-title">Tout ce qu'il faut pour <em>réussir</em> en ligne.</h2>
-      <p>De la première maquette au suivi après la mise en ligne, nous vous accompagnons à chaque étape avec un interlocuteur unique.</p>
+    <div class="head">
+      <p class="label" data-reveal>(01) Services</p>
+      <h2 id="services-title" data-split>Ce que nous <em>créons</em> pour vous.</h2>
+      <p data-reveal style="--d:.2s">De la première maquette au suivi après la mise en ligne, un seul interlocuteur vous accompagne à chaque étape.</p>
     </div>
-    <ol class="service-list">
-      <li class="service reveal">
-        <span class="service-num">01</span><h3>Site vitrine</h3>
-        <p>Présentez votre activité avec un site clair et professionnel qui inspire confiance et génère des demandes de contact.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">02</span><h3>Site e-commerce</h3>
-        <p>Vendez en ligne 24 h/24 avec une boutique simple à gérer, un paiement sécurisé et un parcours d'achat fluide.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">03</span><h3>Refonte de site</h3>
-        <p>Votre site a vieilli ? Nous le modernisons pour qu'il soit plus rapide, adapté au mobile et plus efficace commercialement.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">04</span><h3>Référencement SEO</h3>
-        <p>Soyez trouvé sur Google par vos futurs clients grâce à une optimisation technique, éditoriale et locale.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">05</span><h3>Maintenance &amp; hébergement</h3>
-        <p>Hébergement rapide, sauvegardes, mises à jour et sécurité : votre site reste en forme, vous restez serein.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
-      <li class="service reveal">
-        <span class="service-num">06</span><h3>Identité visuelle &amp; logo</h3>
-        <p>Logo, couleurs, typographies : une image de marque cohérente et mémorable, déclinée sur tous vos supports.</p>
-        <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg>
-      </li>
+    <ol class="svc-list">
+      <li class="svc" data-reveal><span class="svc-num">01</span><h3>Site vitrine</h3><p>Un site clair et professionnel qui inspire confiance et génère des demandes de contact.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
+      <li class="svc" data-reveal><span class="svc-num">02</span><h3>E-commerce</h3><p>Une boutique simple à gérer, un paiement sécurisé et un parcours d'achat fluide.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
+      <li class="svc" data-reveal><span class="svc-num">03</span><h3>Refonte</h3><p>Votre site a vieilli ? Nous le rendons plus rapide, adapté au mobile et plus efficace.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
+      <li class="svc" data-reveal><span class="svc-num">04</span><h3>Référencement</h3><p>Soyez trouvé sur Google par vos futurs clients, à Montréal et ailleurs.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
+      <li class="svc" data-reveal><span class="svc-num">05</span><h3>Maintenance</h3><p>Hébergement, sauvegardes, mises à jour et sécurité : votre site reste en forme.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
+      <li class="svc" data-reveal><span class="svc-num">06</span><h3>Identité visuelle</h3><p>Logo, couleurs, typographies : une image de marque cohérente et mémorable.</p><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"/></svg></li>
     </ol>
+  </div>
+  <div class="svc-preview" aria-hidden="true">
+    <img src="images/projet-boulangerie.webp" alt="" width="720" height="900" loading="lazy">
+    <img src="images/projet-mode.webp" alt="" width="720" height="900" loading="lazy">
+    <img src="images/projet-cabinet.webp" alt="" width="720" height="900" loading="lazy">
+    <img src="images/atelier.webp" alt="" width="800" height="1000" loading="lazy">
+    <img src="images/projet-artisan.webp" alt="" width="720" height="900" loading="lazy">
+    <img src="images/projet-fromagerie.webp" alt="" width="720" height="900" loading="lazy">
   </div>
 </section>
 
 <!-- ===================== MÉTHODE ===================== -->
-<section class="section section-alt" id="methode" aria-labelledby="methode-title">
-  <div class="container">
-    <div class="section-top reveal">
-      <span class="label">(02) Méthode</span>
-      <h2 id="methode-title">Un projet simple, en <em>quatre</em> étapes.</h2>
-      <p>Une démarche claire et transparente : vous savez toujours où en est votre site, et vous validez chaque étape.</p>
+<section class="process" id="methode" aria-labelledby="methode-title">
+  <div class="process-sticky">
+    <div class="container">
+      <div class="head">
+        <p class="label" data-reveal>(02) Méthode</p>
+        <h2 id="methode-title" data-split>Un projet simple, en <em>quatre</em> temps.</h2>
+        <p data-reveal style="--d:.2s">Une démarche claire : vous savez toujours où en est votre site, et vous validez chaque étape.</p>
+      </div>
+      <ol class="process-track">
+        <li class="step"><span class="step-num" aria-hidden="true">01</span><h3>Échange &amp; besoins</h3><p>Nous apprenons à connaître votre activité, vos clients et vos objectifs pour définir le bon projet.</p><span class="duration">Semaine 1</span></li>
+        <li class="step"><span class="step-num" aria-hidden="true">02</span><h3>Maquette &amp; design</h3><p>Une maquette sur mesure, que nous ajustons avec vous jusqu'à ce qu'elle vous ressemble.</p><span class="duration">Semaines 1 – 2</span></li>
+        <li class="step"><span class="step-num" aria-hidden="true">03</span><h3>Développement</h3><p>Un site rapide, sécurisé, adapté au mobile et optimisé pour le référencement.</p><span class="duration">Semaines 2 – 3</span></li>
+        <li class="step"><span class="step-num" aria-hidden="true">04</span><h3>Mise en ligne &amp; suivi</h3><p>Nous publions votre site, vous formons à sa gestion et restons disponibles pour la suite.</p><span class="duration">Semaine 3 et après</span></li>
+      </ol>
+      <div class="process-bar" aria-hidden="true"><span></span></div>
     </div>
-    <ol class="steps">
-      <li class="step reveal">
-        <span class="step-num" aria-hidden="true">01</span>
-        <h3>Échange &amp; besoins</h3>
-        <p>Nous apprenons à connaître votre activité, vos clients et vos objectifs pour définir le bon projet.</p>
-        <span class="duration">Semaine 1</span>
-      </li>
-      <li class="step reveal reveal-delay-1">
-        <span class="step-num" aria-hidden="true">02</span>
-        <h3>Maquette &amp; design</h3>
-        <p>Nous dessinons une maquette sur mesure que vous ajustez avec nous jusqu'à ce qu'elle vous ressemble.</p>
-        <span class="duration">Semaines 1 – 2</span>
-      </li>
-      <li class="step reveal reveal-delay-2">
-        <span class="step-num" aria-hidden="true">03</span>
-        <h3>Développement</h3>
-        <p>Nous construisons un site rapide, sécurisé, adapté au mobile et optimisé pour le référencement.</p>
-        <span class="duration">Semaines 2 – 3</span>
-      </li>
-      <li class="step reveal reveal-delay-3">
-        <span class="step-num" aria-hidden="true">04</span>
-        <h3>Mise en ligne &amp; suivi</h3>
-        <p>Nous publions votre site, vous formons à sa gestion et restons disponibles pour la suite.</p>
-        <span class="duration">Semaine 3 et après</span>
-      </li>
-    </ol>
   </div>
 </section>
 
-<!-- ===================== RÉALISATIONS ===================== -->
-<section class="section" id="realisations" aria-labelledby="realisations-title">
+<!-- ===================== SECTEURS ===================== -->
+<section class="section" id="secteurs" aria-labelledby="secteurs-title">
   <div class="container">
-    <div class="section-top reveal">
-      <span class="label">(03) Réalisations</span>
-      <h2 id="realisations-title">Quelques projets dont nous sommes <em>fiers</em>.</h2>
-      <p>Chaque site est unique, conçu pour l'activité et les clients de celui qui le porte.</p>
+    <div class="head">
+      <p class="label" data-reveal>(03) Secteurs</p>
+      <h2 id="secteurs-title" data-split>Un site pensé pour <em>votre</em> métier.</h2>
+      <p data-reveal style="--d:.2s">Commerce de quartier, profession libérale ou artisan : chaque site est conçu pour vos clients et votre façon de travailler.</p>
     </div>
-    <div class="filters" role="group" aria-label="Filtrer les réalisations">
-      <button class="filter-btn" type="button" data-filter="tous" aria-pressed="true">Tous<sup>6</sup></button>
-      <button class="filter-btn" type="button" data-filter="vitrine" aria-pressed="false">Vitrine<sup>2</sup></button>
-      <button class="filter-btn" type="button" data-filter="ecommerce" aria-pressed="false">E-commerce<sup>2</sup></button>
-      <button class="filter-btn" type="button" data-filter="refonte" aria-pressed="false">Refonte<sup>2</sup></button>
+    <div class="work">
+      <article class="work-item">
+        <div class="media" data-reveal-img><img src="images/projet-boulangerie.webp" alt="Pains et viennoiseries en vitrine d'une boulangerie" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Commerce</span><span>Site vitrine</span></div>
+        <h3>Boulangeries &amp; cafés</h3>
+        <p>Menu, heures d'ouverture et commandes spéciales en ligne.</p>
+      </article>
+      <article class="work-item">
+        <div class="media" data-reveal-img style="--d:.1s"><img src="images/projet-mode.webp" alt="Intérieur d'une boutique de vêtements" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Mode</span><span>E-commerce</span></div>
+        <h3>Boutiques &amp; créateurs</h3>
+        <p>Une boutique en ligne élégante, simple à mettre à jour.</p>
+      </article>
+      <article class="work-item">
+        <div class="media" data-reveal-img style="--d:.2s"><img src="images/projet-cabinet.webp" alt="Statue de la justice" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Services</span><span>Refonte</span></div>
+        <h3>Cabinets &amp; professionnels</h3>
+        <p>Une image sérieuse qui inspire confiance et attire des rendez-vous.</p>
+      </article>
+      <article class="work-item">
+        <div class="media" data-reveal-img><img src="images/projet-yoga.webp" alt="Posture de yoga au coucher du soleil" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Bien-être</span><span>Réservation</span></div>
+        <h3>Studios &amp; bien-être</h3>
+        <p>Horaire des cours et réservation en ligne, sans friction.</p>
+      </article>
+      <article class="work-item">
+        <div class="media" data-reveal-img style="--d:.1s"><img src="images/projet-fromagerie.webp" alt="Plateau de fromages fins" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Alimentation</span><span>E-commerce</span></div>
+        <h3>Épiceries fines</h3>
+        <p>Vente en ligne avec cueillette en boutique ou livraison.</p>
+      </article>
+      <article class="work-item">
+        <div class="media" data-reveal-img style="--d:.2s"><img src="images/projet-artisan.webp" alt="Plans de rénovation dessinés à la main" width="720" height="900" loading="lazy" decoding="async" data-speed="0.06"></div>
+        <div class="work-meta"><span>Construction</span><span>SEO local</span></div>
+        <h3>Entrepreneurs &amp; artisans</h3>
+        <p>Être trouvé sur Google par les clients de votre secteur.</p>
+      </article>
     </div>
-    <div class="projects" id="projects">
-      <article class="project reveal" data-category="vitrine">
-        <div class="project-img"><img src="images/projet-boulangerie.webp" alt="Vitrine de pains et viennoiseries de la Boulangerie Gagnon" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>Site vitrine</span><span>2025</span></div>
-        <h3>Boulangerie Gagnon</h3>
-        <p>Site vitrine avec carte des produits et commande de gâteaux.</p>
-      </article>
-      <article class="project reveal reveal-delay-1" data-category="ecommerce">
-        <div class="project-img"><img src="images/projet-mode.webp" alt="Intérieur de la boutique de vêtements Atelier Sienne" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>E-commerce</span><span>2025</span></div>
-        <h3>Atelier Sienne</h3>
-        <p>Boutique de prêt-à-porter éthique, 300 produits en ligne.</p>
-      </article>
-      <article class="project reveal reveal-delay-2" data-category="refonte">
-        <div class="project-img"><img src="images/projet-cabinet.webp" alt="Statue de la justice, illustrant le cabinet d'avocats Tremblay &amp; Associés" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>Refonte</span><span>2024</span></div>
-        <h3>Tremblay &amp; Associés</h3>
-        <p>Refonte complète d'un cabinet d'avocats : +65 % de contacts.</p>
-      </article>
-      <article class="project reveal" data-category="vitrine">
-        <div class="project-img"><img src="images/projet-yoga.webp" alt="Posture de yoga au coucher du soleil, illustrant le Studio Respire" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>Site vitrine</span><span>2024</span></div>
-        <h3>Studio Respire</h3>
-        <p>Studio de yoga avec horaire des cours et réservation en ligne.</p>
-      </article>
-      <article class="project reveal reveal-delay-1" data-category="ecommerce">
-        <div class="project-img"><img src="images/projet-fromagerie.webp" alt="Plateau de fromages fins de la fromagerie Les Coteaux" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>E-commerce</span><span>2024</span></div>
-        <h3>Fromagerie Les Coteaux</h3>
-        <p>Fromages fins en ligne, avec cueillette en boutique ou livraison.</p>
-      </article>
-      <article class="project reveal reveal-delay-2" data-category="refonte">
-        <div class="project-img"><img src="images/projet-artisan.webp" alt="Plans de rénovation dessinés à la main pour Rénovations Roy" width="720" height="900" loading="lazy" decoding="async"></div>
-        <div class="project-meta"><span>Refonte</span><span>2023</span></div>
-        <h3>Rénovations Roy</h3>
-        <p>Entrepreneur en rénovation : site modernisé et 1<sup>re</sup> page Google locale.</p>
-      </article>
+  </div>
+</section>
+
+<!-- ===================== ENGAGEMENTS ===================== -->
+<section class="section section-ink" id="engagements" aria-labelledby="engagements-title">
+  <div class="container">
+    <div class="head">
+      <p class="label" data-reveal>(04) Nos engagements</p>
+      <h2 id="engagements-title" data-split>Des promesses <em>simples</em>, tenues.</h2>
+    </div>
+    <div class="stats">
+      <div class="stat" data-reveal><strong><span data-count="24">24</span><small>h</small></strong><span>pour répondre à votre demande</span></div>
+      <div class="stat" data-reveal style="--d:.1s"><strong><span data-count="3">3</span><small>sem.</small></strong><span>pour un site vitrine, en moyenne</span></div>
+      <div class="stat" data-reveal style="--d:.2s"><strong><span data-count="100">100</span><small>%</small></strong><span>sur mesure et adapté au mobile</span></div>
+      <div class="stat" data-reveal style="--d:.3s"><strong><span data-count="0">0</span><small>$</small></strong><span>pour la soumission, sans engagement</span></div>
     </div>
   </div>
 </section>
 
 <!-- ===================== TARIFS ===================== -->
-<section class="section section-alt" id="tarifs" aria-labelledby="tarifs-title">
+<section class="section" id="tarifs" aria-labelledby="tarifs-title">
   <div class="container">
-    <div class="section-top reveal">
-      <span class="label">(04) Tarifs</span>
-      <h2 id="tarifs-title">Des forfaits clairs, <em>sans surprise</em>.</h2>
-      <p>Prix de départ indicatifs, avant taxes. Chaque projet fait l'objet d'une soumission détaillée et gratuite.</p>
+    <div class="head">
+      <p class="label" data-reveal>(05) Tarifs</p>
+      <h2 id="tarifs-title" data-split>Des forfaits clairs, <em>sans surprise</em>.</h2>
+      <p data-reveal style="--d:.2s">Prix de départ indicatifs, avant taxes. Chaque projet fait l'objet d'une soumission détaillée et gratuite.</p>
     </div>
     <div class="pricing">
-      <article class="price-card reveal">
-        <div class="price-head"><h3>Essentiel</h3></div>
-        <p class="price-desc">Pour démarrer en ligne avec une présence professionnelle.</p>
+      <article class="plan" data-reveal>
+        <div class="plan-head"><h3>Essentiel</h3></div>
+        <p class="plan-desc">Pour démarrer en ligne avec une présence professionnelle.</p>
         <p class="price">1 490 $<small>+ taxes</small></p>
         <ul class="checklist">
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Site de 1 à 5 pages</li>
@@ -279,11 +267,11 @@
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Nom de domaine et certificat SSL</li>
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Livraison en 2 semaines</li>
         </ul>
-        <a href="contact.html?formule=essentiel" class="btn btn-outline btn-block">Choisir Essentiel</a>
+        <a href="#contact" data-formule="essentiel" class="btn btn-outline btn-block">Choisir Essentiel</a>
       </article>
-      <article class="price-card featured reveal reveal-delay-1">
-        <div class="price-head"><h3>Pro</h3><span>Recommandé</span></div>
-        <p class="price-desc">Pour attirer des clients et gagner en visibilité sur Google.</p>
+      <article class="plan featured" data-reveal style="--d:.12s">
+        <div class="plan-head"><h3>Pro</h3><span>Recommandé</span></div>
+        <p class="plan-desc">Pour attirer des clients et gagner en visibilité sur Google.</p>
         <p class="price">2 990 $<small>+ taxes</small></p>
         <ul class="checklist">
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Jusqu'à 10 pages</li>
@@ -293,11 +281,11 @@
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Statistiques de visites</li>
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Formation à la gestion du site</li>
         </ul>
-        <a href="contact.html?formule=pro" class="btn btn-primary btn-block">Choisir Pro <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+        <a href="#contact" data-formule="pro" class="btn btn-primary btn-block">Choisir Pro <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </article>
-      <article class="price-card reveal reveal-delay-2">
-        <div class="price-head"><h3>E-commerce</h3></div>
-        <p class="price-desc">Pour vendre vos produits en ligne en toute simplicité.</p>
+      <article class="plan" data-reveal style="--d:.24s">
+        <div class="plan-head"><h3>E-commerce</h3></div>
+        <p class="plan-desc">Pour vendre vos produits en ligne en toute simplicité.</p>
         <p class="price">4 990 $<small>+ taxes</small></p>
         <ul class="checklist">
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Boutique en ligne complète</li>
@@ -306,101 +294,161 @@
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>SEO des fiches produits</li>
           <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-check"/></svg>Accompagnement au lancement</li>
         </ul>
-        <a href="contact.html?formule=ecommerce" class="btn btn-outline btn-block">Choisir E-commerce</a>
+        <a href="#contact" data-formule="ecommerce" class="btn btn-outline btn-block">Choisir E-commerce</a>
       </article>
     </div>
-    <p class="pricing-note">Maintenance &amp; hébergement à partir de 59 $ / mois (+ taxes). Paiement possible en 3 versements sans frais.</p>
+    <p class="pricing-note" data-reveal>Maintenance &amp; hébergement à partir de 59 $ / mois (+ taxes). Paiement possible en 3 versements sans frais.</p>
   </div>
 </section>
 
-<!-- ===================== TÉMOIGNAGES ===================== -->
-<section class="section" id="temoignages" aria-labelledby="temoignages-title">
-  <div class="container">
-    <span class="label reveal">(05) Témoignages</span>
-    <h2 class="sr-only" id="temoignages-title">Ils nous ont fait confiance</h2>
-    <div class="carousel reveal" data-carousel aria-roledescription="carrousel" aria-label="Avis clients" style="margin-top:40px">
-      <div class="carousel-viewport">
-        <div class="carousel-track">
-          <figure class="testimonial" role="group" aria-roledescription="avis" aria-label="1 sur 4">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <blockquote>Une équipe à l'écoute, réactive et de très bon conseil. Notre nouveau site nous amène des commandes chaque semaine.</blockquote>
-            <figcaption class="author"><span class="author-photo" aria-hidden="true">CG</span><div><strong>Claire Gagnon</strong><span>Boulangerie Gagnon · <span class="stars" aria-label="Note : 5 sur 5">★★★★★</span></span></div></figcaption>
-          </figure>
-          <figure class="testimonial" role="group" aria-roledescription="avis" aria-label="2 sur 4">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <blockquote>Notre boutique en ligne a été livrée dans les temps, et elle est d'une simplicité incroyable à gérer. Nos ventes ont doublé en un an.</blockquote>
-            <figcaption class="author"><span class="author-photo" aria-hidden="true">JL</span><div><strong>Julien Lefebvre</strong><span>Atelier Sienne · <span class="stars" aria-label="Note : 5 sur 5">★★★★★</span></span></div></figcaption>
-          </figure>
-          <figure class="testimonial" role="group" aria-roledescription="avis" aria-label="3 sur 4">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <blockquote>La refonte a complètement changé notre image. Nos clients disent que le site inspire confiance, et les demandes de rendez-vous ont explosé.</blockquote>
-            <figcaption class="author"><span class="author-photo" aria-hidden="true">ST</span><div><strong>Sophie Tremblay</strong><span>Tremblay &amp; Associés · <span class="stars" aria-label="Note : 5 sur 5">★★★★★</span></span></div></figcaption>
-          </figure>
-          <figure class="testimonial" role="group" aria-roledescription="avis" aria-label="4 sur 4">
-            <span class="quote-mark" aria-hidden="true">“</span>
-            <blockquote>Je n'y connaissais rien et on m'a tout expliqué simplement. Je suis maintenant en première page sur Google dans ma ville.</blockquote>
-            <figcaption class="author"><span class="author-photo" aria-hidden="true">AR</span><div><strong>Antoine Roy</strong><span>Rénovations Roy · <span class="stars" aria-label="Note : 4 sur 5">★★★★☆</span></span></div></figcaption>
-          </figure>
-        </div>
-      </div>
-      <div class="carousel-controls">
-        <p class="carousel-count" aria-live="polite"><strong data-current>01</strong> / 04</p>
-        <button class="icon-btn" type="button" data-prev aria-label="Avis précédent"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-left"/></svg></button>
-        <button class="icon-btn" type="button" data-next aria-label="Avis suivant"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-chevron-right"/></svg></button>
-      </div>
+<!-- ===================== L'AGENCE ===================== -->
+<section class="section section-alt" id="agence" aria-labelledby="agence-title">
+  <div class="container about">
+    <div class="media" data-reveal-img><img src="images/atelier.webp" alt="Ordinateur portable affichant un tableau de statistiques de site web" width="800" height="1000" loading="lazy" decoding="async" data-speed="0.07"></div>
+    <div class="about-text">
+      <p class="label" data-reveal>(06) L'agence</p>
+      <h2 id="agence-title" data-split>Une agence montréalaise, à votre <em>écoute</em>.</h2>
+      <p class="lead" data-reveal>Keloar est une agence web fondée à Montréal par Tarmat Hamza.</p>
+      <p data-reveal>Notre conviction : un bon site web n'est pas réservé aux grandes entreprises. Les commerçants, travailleurs autonomes et PME méritent eux aussi des outils performants, expliqués simplement et à un prix juste. Nous écoutons d'abord, nous concevons ensuite, et nous restons disponibles après la mise en ligne.</p>
+      <ul class="values">
+        <li data-reveal><strong>Proximité</strong><span>Un interlocuteur unique et joignable.</span></li>
+        <li data-reveal style="--d:.1s"><strong>Transparence</strong><span>Des soumissions claires, sans frais cachés.</span></li>
+        <li data-reveal style="--d:.2s"><strong>Exigence</strong><span>Des sites rapides, accessibles et bien référencés.</span></li>
+      </ul>
+      <p class="signature" data-reveal>Tarmat Hamza<small>Keloar, Montréal</small></p>
     </div>
   </div>
 </section>
 
 <!-- ===================== FAQ ===================== -->
-<section class="section section-alt" id="faq" aria-labelledby="faq-title">
+<section class="section" id="faq" aria-labelledby="faq-title">
   <div class="container faq-layout">
-    <div class="faq-intro reveal">
-      <span class="label">(06) FAQ</span>
-      <h2 id="faq-title" style="margin-top:20px">Vos questions, nos <em>réponses</em>.</h2>
-      <p>Une autre question ? Écrivez-nous à <a href="mailto:info@keloar.com">info@keloar.com</a> ou appelez le <a href="tel:+13542683773">354 268-3773</a>.</p>
+    <div class="faq-intro">
+      <p class="label" data-reveal>(07) FAQ</p>
+      <h2 id="faq-title" data-split>Vos questions, nos <em>réponses</em>.</h2>
+      <p data-reveal>Une autre question ? Écrivez-nous à <a href="mailto:info@keloar.com">info@keloar.com</a> ou appelez le <a href="tel:+13542683773">354 268-3773</a>.</p>
     </div>
-    <div class="faq reveal reveal-delay-1">
+    <div class="faq" data-reveal>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-q1">Combien de temps faut-il pour créer mon site ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-q1">Combien de temps faut-il pour créer mon site ?<span class="plus" aria-hidden="true"></span></button></h3>
         <div class="faq-answer" id="faq-1" role="region" aria-labelledby="faq-q1"><div><p>Comptez en moyenne 2 à 3 semaines pour un site vitrine et 4 à 6 semaines pour un site e-commerce. Le délai dépend surtout de la rapidité de nos échanges et de la fourniture de vos contenus (textes, photos).</p></div></div>
       </div>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-q2">Combien coûte un site internet ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
-        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-q2"><div><p>Nos forfaits démarrent à 1 490 $ (avant taxes) pour un site vitrine. Le prix final dépend du nombre de pages et des fonctionnalités souhaitées. Nous vous remettons une soumission détaillée, gratuite et sans engagement en 24 h.</p></div></div>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-q2">Combien coûte un site internet ?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-answer" id="faq-2" role="region" aria-labelledby="faq-q2"><div><p>Nos forfaits démarrent à 1 490 $ (avant taxes) pour un site vitrine. Le prix final dépend du nombre de pages et des fonctionnalités souhaitées. Nous vous remettons une soumission détaillée, gratuite et sans engagement en 24&nbsp;h.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-q3">Vous occupez-vous de l'hébergement ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
-        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-q3"><div><p>Oui. Nous proposons un hébergement rapide et sécurisé au Canada, avec nom de domaine, certificat SSL, sauvegardes quotidiennes et surveillance. Vous pouvez aussi garder votre hébergeur actuel.</p></div></div>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-q3">Vous occupez-vous de l'hébergement ?<span class="plus" aria-hidden="true"></span></button></h3>
+        <div class="faq-answer" id="faq-3" role="region" aria-labelledby="faq-q3"><div><p>Oui. Nous proposons un hébergement rapide et sécurisé, avec nom de domaine, certificat SSL, sauvegardes et surveillance. Vous pouvez aussi garder votre hébergeur actuel.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-q4">Pourrai-je modifier mon site après la livraison ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-q4">Pourrai-je modifier mon site après la livraison ?<span class="plus" aria-hidden="true"></span></button></h3>
         <div class="faq-answer" id="faq-4" role="region" aria-labelledby="faq-q4"><div><p>Bien sûr. Nous vous formons à la gestion de vos contenus (textes, images, nouvelles). Pour les évolutions plus importantes, notre forfait maintenance ou une intervention ponctuelle est à votre disposition.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-q5">Mon site sera-t-il bien référencé sur Google ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-q5">Mon site sera-t-il bien référencé sur Google ?<span class="plus" aria-hidden="true"></span></button></h3>
         <div class="faq-answer" id="faq-5" role="region" aria-labelledby="faq-q5"><div><p>Tous nos sites suivent les bonnes pratiques SEO : rapidité, structure, balises, données structurées et compatibilité mobile. Le forfait Pro ajoute un travail sur vos mots-clés et votre fiche Google Business Profile pour le référencement local.</p></div></div>
       </div>
       <div class="faq-item">
-        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-q6">Serai-je propriétaire de mon site ?<svg class="icon" aria-hidden="true"><use href="#i-plus"/></svg></button></h3>
+        <h3 style="margin:0"><button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-6" id="faq-q6">Serai-je propriétaire de mon site ?<span class="plus" aria-hidden="true"></span></button></h3>
         <div class="faq-answer" id="faq-6" role="region" aria-labelledby="faq-q6"><div><p>Oui, à 100 %. Une fois le projet réglé, le site, ses contenus et le nom de domaine vous appartiennent. Vous recevez tous les accès et pouvez changer de fournisseur quand vous le souhaitez.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===================== CTA FINAL ===================== -->
-<section class="section" aria-labelledby="cta-title">
-  <div class="container">
-    <div class="cta reveal">
-      <h2 id="cta-title">Prêt à lancer votre <em>projet</em> ?</h2>
-      <div>
-        <p>Parlez-nous de votre activité : nous vous répondons en 24 h avec des conseils et une soumission gratuite.</p>
-        <a href="contact.html" class="btn btn-white">Demander ma soumission <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
-        <div class="cta-contact">
-          <a href="tel:+13542683773">354 268-3773</a>
-          <a href="mailto:info@keloar.com">info@keloar.com</a>
+<!-- ===================== CONTACT ===================== -->
+<section class="section section-ink" id="contact" aria-labelledby="contact-title">
+  <div class="container contact">
+    <div>
+      <p class="label" data-reveal>(08) Contact</p>
+      <h2 id="contact-title" data-split>Parlons de votre <em>projet</em>.</h2>
+      <p class="contact-lead" data-reveal>Remplissez le formulaire : nous revenons vers vous en 24&nbsp;h ouvrables avec nos premières recommandations et une soumission gratuite.</p>
+      <ul class="contact-list" data-reveal>
+        <li><span>Téléphone</span><a href="tel:+13542683773">354 268-3773</a></li>
+        <li><span>Courriel</span><a href="mailto:info@keloar.com">info@keloar.com</a></li>
+        <li><span>Adresse</span><b>Montréal (Québec), Canada</b></li>
+        <li><span>Heures</span><b>Lun – ven, 9&nbsp;h – 18&nbsp;h</b></li>
+      </ul>
+    </div>
+
+    <div data-reveal style="--d:.15s">
+      <!--
+        Pour recevoir réellement les messages, collez l'URL d'un service de formulaire
+        (ex. Formspree : https://formspree.io/f/VOTRE_ID) dans data-endpoint.
+        Sans URL, le formulaire affiche seulement le message de confirmation (mode démo).
+      -->
+      <form id="quote-form" novalidate data-endpoint="">
+        <div class="form-row">
+          <div class="field">
+            <label for="nom">Nom et prénom <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="nom" name="nom" autocomplete="name" required aria-describedby="nom-error">
+            <span class="error-msg" id="nom-error">Merci d'indiquer votre nom.</span>
+          </div>
+          <div class="field">
+            <label for="email">Courriel <span class="req" aria-hidden="true">*</span></label>
+            <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
+            <span class="error-msg" id="email-error">Merci d'indiquer une adresse courriel valide (ex. nom@domaine.com).</span>
+          </div>
         </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone" autocomplete="tel" inputmode="tel" aria-describedby="telephone-error" data-validate="phone">
+            <span class="error-msg" id="telephone-error">Ce numéro ne semble pas valide (ex. 514 555-0123).</span>
+          </div>
+          <div class="field">
+            <label for="entreprise">Entreprise</label>
+            <input type="text" id="entreprise" name="entreprise" autocomplete="organization">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="type">Type de projet <span class="req" aria-hidden="true">*</span></label>
+            <select id="type" name="type" required aria-describedby="type-error">
+              <option value="">Choisissez…</option>
+              <option value="vitrine">Site vitrine</option>
+              <option value="ecommerce">Site e-commerce</option>
+              <option value="refonte">Refonte de site</option>
+              <option value="seo">Référencement SEO</option>
+              <option value="maintenance">Maintenance &amp; hébergement</option>
+              <option value="identite">Identité visuelle / logo</option>
+              <option value="autre">Autre</option>
+            </select>
+            <span class="error-msg" id="type-error">Merci de choisir un type de projet.</span>
+          </div>
+          <div class="field">
+            <label for="budget">Budget</label>
+            <select id="budget" name="budget">
+              <option value="">Je ne sais pas encore</option>
+              <option value="moins-1500">Moins de 1 500 $</option>
+              <option value="1500-3000">1 500 $ – 3 000 $</option>
+              <option value="3000-6000">3 000 $ – 6 000 $</option>
+              <option value="plus-6000">Plus de 6 000 $</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="message">Votre projet <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="message" name="message" required minlength="20" aria-describedby="message-error" placeholder="Votre activité, vos objectifs, les sites que vous aimez…"></textarea>
+          <span class="error-msg" id="message-error">Merci de décrire votre projet en quelques mots (20 caractères minimum).</span>
+        </div>
+        <div class="consent">
+          <input type="checkbox" id="rgpd" name="consentement" required aria-describedby="rgpd-error">
+          <label for="rgpd">J'accepte que mes renseignements personnels soient utilisés pour me recontacter au sujet de ma demande, conformément à la <a href="confidentialite.html">politique de confidentialité</a>. <span class="req" aria-hidden="true">*</span></label>
+          <span class="error-msg" id="rgpd-error">Votre accord est nécessaire pour traiter votre demande.</span>
+        </div>
+        <div class="sr-only" aria-hidden="true">
+          <label for="site_web">Ne pas remplir</label>
+          <input type="text" id="site_web" name="site_web" tabindex="-1" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-light btn-block magnetic"><span class="btn-label">Envoyer ma demande</span> <svg class="icon icon-sm" aria-hidden="true"><use href="#i-arrow-right"/></svg></button>
+        <p class="form-hint">Réponse en 24&nbsp;h ouvrables · Gratuit et sans engagement</p>
+      </form>
+      <div class="form-success" id="form-success" role="status" aria-live="polite" tabindex="-1">
+        <p class="label">Demande envoyée</p>
+        <h3>Merci, nous avons bien reçu votre <em>demande</em>.</h3>
+        <p>Nous l'étudions avec attention et revenons vers vous en 24&nbsp;h ouvrables. À très vite !</p>
       </div>
     </div>
   </div>
@@ -409,42 +457,26 @@
 </main>
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-grid">
+    <div class="footer-top">
       <div>
         <p class="footer-title">Keloar — Montréal</p>
         <p class="footer-pitch">Des sites web soignés pour les entreprises qui veulent grandir.</p>
-        <div class="socials">
-          <a href="https://www.linkedin.com/" aria-label="LinkedIn" rel="noopener" target="_blank"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-linkedin"/></svg></a>
-          <a href="https://www.instagram.com/" aria-label="Instagram" rel="noopener" target="_blank"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-instagram"/></svg></a>
-          <a href="https://www.facebook.com/" aria-label="Facebook" rel="noopener" target="_blank"><svg class="icon icon-sm" aria-hidden="true"><use href="#i-facebook"/></svg></a>
-        </div>
       </div>
       <div>
         <h2 class="footer-title">Navigation</h2>
         <ul class="footer-links">
-          <li><a href="index.html#services">Services</a></li>
-          <li><a href="index.html#realisations">Réalisations</a></li>
-          <li><a href="index.html#tarifs">Tarifs</a></li>
-          <li><a href="a-propos.html">À propos</a></li>
-          <li><a href="index.html#faq">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2 class="footer-title">Services</h2>
-        <ul class="footer-links">
-          <li><a href="index.html#services">Site vitrine</a></li>
-          <li><a href="index.html#services">Site e-commerce</a></li>
-          <li><a href="index.html#services">Refonte de site</a></li>
-          <li><a href="index.html#services">Référencement SEO</a></li>
-          <li><a href="index.html#services">Maintenance</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#methode">Méthode</a></li>
+          <li><a href="#tarifs">Tarifs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
       <div>
         <h2 class="footer-title">Contact</h2>
-        <ul class="footer-contact">
-          <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-pin"/></svg><span>Montréal (Québec)<br>Canada</span></li>
-          <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+13542683773">354 268-3773</a></li>
-          <li><svg class="icon icon-sm" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:info@keloar.com">info@keloar.com</a></li>
+        <ul class="footer-links">
+          <li><a href="tel:+13542683773">354 268-3773</a></li>
+          <li><a href="mailto:info@keloar.com">info@keloar.com</a></li>
+          <li>Montréal (Québec), Canada</li>
         </ul>
       </div>
     </div>
@@ -453,22 +485,11 @@
       <nav aria-label="Liens légaux">
         <a href="mentions-legales.html">Mentions légales</a>
         <a href="confidentialite.html">Politique de confidentialité</a>
-        <a href="#" data-cookie-settings>Gérer les témoins</a>
       </nav>
     </div>
-    <p class="footer-word" aria-hidden="true">Keloar<span>.</span></p>
+    <p class="footer-word" aria-hidden="true">Keloar.</p>
   </div>
 </footer>
-
-<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Gestion des témoins" hidden>
-  <strong>Votre vie privée compte</strong>
-  <p>Nous utilisons uniquement des témoins (cookies) techniques nécessaires au site. Avec votre accord, nous chargeons aussi la carte Google Maps et une mesure d'audience anonyme. <a href="confidentialite.html">En savoir plus</a></p>
-  <div class="cookie-actions">
-    <button class="btn btn-outline btn-sm" type="button" data-cookie="refuse">Refuser</button>
-    <button class="btn btn-primary btn-sm" type="button" data-cookie="accept">Accepter</button>
-  </div>
-</div>
-
 <button class="back-to-top" type="button" aria-label="Revenir en haut de la page">
   <svg class="icon" aria-hidden="true"><use href="#i-arrow-up"/></svg>
 </button>
