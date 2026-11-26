@@ -99,3 +99,22 @@ en une à deux minutes.
 Après la mise en ligne : déclarez le site et `https://keloar.com/sitemap.xml` dans
 Google Search Console, et créez votre fiche Google Business Profile à Montréal pour le
 référencement local.
+
+## Crédits photos
+
+Photos issues d'[Unsplash](https://unsplash.com), utilisées selon la
+[licence Unsplash](https://unsplash.com/license) (usage commercial autorisé, sans attribution obligatoire).
+Recadrées et converties en WebP :
+
+| Fichier | Photo d'origine |
+|---|---|
+| `hero-site.webp` | https://images.unsplash.com/photo-1460925895917-afdab827c52f |
+| `projet-boulangerie.webp` | https://images.unsplash.com/photo-1517433670267-08bbd4be890f |
+| `projet-mode.webp` | https://images.unsplash.com/photo-1441986300917-64674bd600d8 |
+| `projet-cabinet.webp` | https://images.unsplash.com/photo-1589829545856-d10d557cf95f |
+| `projet-yoga.webp` | https://images.unsplash.com/photo-1544367567-0f2fcb009e0b |
+| `projet-fromagerie.webp` | https://images.unsplash.com/photo-1452195100486-9cc805987862 |
+| `projet-artisan.webp` | https://images.unsplash.com/photo-1503387762-592deb58ef4e |
+| `atelier.webp` | https://images.unsplash.com/photo-1498050108023-c5249f4df085 |
+
+N'utilisez pas d'images trouvées sur Pinterest ou Google Images : elles appartiennent à leurs auteurs.

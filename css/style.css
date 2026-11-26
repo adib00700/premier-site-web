@@ -504,3 +504,6 @@ ul { margin: 0; padding: 0; list-style: none; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Capture d'écran dans la fenêtre du hero */
+.mockup-shot { width: 100%; height: auto; display: block; }
